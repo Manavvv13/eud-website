@@ -649,8 +649,8 @@ export default function AllProperties({ initialSearch, onBack }) {
 
       {/* Property Details Modal */}
       {selectedProperty && (
-        <div className="property-modal-overlay">
-          <div className="property-modal-card">
+        <div className="property-modal-overlay" onClick={() => setSelectedProperty(null)}>
+          <div className="property-modal-card" onClick={(e) => e.stopPropagation()}>
             <button className="btn-close-modal" onClick={() => setSelectedProperty(null)}>
               <X size={20} />
             </button>
