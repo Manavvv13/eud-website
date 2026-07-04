@@ -452,7 +452,7 @@ export default function AllProperties({ initialSearch, onBack }) {
   }, [search, statusFilter, locationFilter]);
 
   // Filter properties logic
-  const filteredProperties = ALL_PROPERTIES.filter((p) => {
+  const filteredProperties = ALL_PROPERTIES.slice(0, 5).filter((p) => {
     const matchesSearch = p.name.toLowerCase().includes(search.toLowerCase()) || 
                           p.location.toLowerCase().includes(search.toLowerCase()) ||
                           p.type.toLowerCase().includes(search.toLowerCase());
@@ -731,7 +731,13 @@ export default function AllProperties({ initialSearch, onBack }) {
                 <p className="modal-desc">{selectedProperty.desc}</p>
 
                 <div className="modal-cta-actions">
-                  <a href="#contact" onClick={() => { setSelectedProperty(null); onBack(); setTimeout(() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' }), 300); }} className="modal-btn-primary">
+                  <a 
+                    href={`https://wa.me/919999888990?text=${encodeURIComponent(`Hi, I'm interested in inquiring about "${selectedProperty.name}" property.`)}`} 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="modal-btn-primary"
+                    style={{ textAlign: 'center', display: 'inline-flex', alignItems: 'center', justifyContent: 'center' }}
+                  >
                     Enquire Now
                   </a>
                 </div>

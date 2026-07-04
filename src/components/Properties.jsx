@@ -458,7 +458,7 @@ export default function Properties({ onSeeAll }) {
           </div>
 
           {/* Card 6 - Nirala Trio */}
-          <div className="premier-card">
+          <div className="premier-card" style={{ display: 'none' }}>
             <div className="premier-card-img-wrapper">
               <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=800&q=80" alt="Nirala Trio" className="premier-card-img" />
               <span className="premier-card-badge">Under Construction</span>
