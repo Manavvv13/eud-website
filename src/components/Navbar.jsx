@@ -68,19 +68,23 @@ export default function Navbar({ onContact }) {
         </div>
       </div>
 
-      {/* Mobile Navigation Drawer */}
-      <div className={`mobile-drawer ${mobileMenuOpen ? 'open' : ''}`}>
-        <div className="mobile-drawer-links">
-          <a href="#home" onClick={(e) => handleNavClick(e, 'home')} className="mobile-link">Home</a>
-          <a href="#about" onClick={(e) => handleNavClick(e, 'about')} className="mobile-link">About Us</a>
-          <a href="#premier-houses" onClick={(e) => handleNavClick(e, 'premier-houses')} className="mobile-link">Properties</a>
-          <a href="#about" onClick={(e) => handleNavClick(e, 'about')} className="mobile-link">Services</a>
+      {/* Mobile Navigation Dropdown (Smaller Menu) */}
+      <div className={`mobile-dropdown-menu ${mobileMenuOpen ? 'open' : ''}`}>
+        <div className="mobile-dropdown-header">
+          <span className="mobile-dropdown-title">Menu</span>
+          <button className="btn-close-mobile-menu" onClick={() => setMobileMenuOpen(false)}>
+            <X size={16} />
+          </button>
+        </div>
+        <div className="mobile-dropdown-links">
+          <a href="#home" onClick={(e) => handleNavClick(e, 'home')} className="mobile-dropdown-link">Home</a>
+          <a href="#about" onClick={(e) => handleNavClick(e, 'about')} className="mobile-dropdown-link">About Us</a>
+          <a href="#premier-houses" onClick={(e) => handleNavClick(e, 'premier-houses')} className="mobile-dropdown-link">Properties</a>
+          <a href="#about" onClick={(e) => handleNavClick(e, 'about')} className="mobile-dropdown-link">Services</a>
           
-          <div className="mobile-drawer-footer">
-            <button className="btn-contact-nav mobile-btn" onClick={onContact}>
-              Contact Us
-            </button>
-          </div>
+          <button className="btn-contact-mobile-menu" onClick={(e) => { setMobileMenuOpen(false); onContact(); }}>
+            Contact Us
+          </button>
         </div>
       </div>
     </nav>

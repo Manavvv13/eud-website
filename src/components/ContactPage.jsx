@@ -16,13 +16,36 @@ export default function ContactPage({ onBack }) {
     setFormData(prev => ({ ...prev, [e.target.name]: e.target.value }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
-    setTimeout(() => {
+    
+    const activeUrl = "https://script.google.com/macros/s/AKfycbzi-N0PGk_9ESd6n3EsbZgamy4cWhtWrSYOewbFfnlrCDpsOt1D1rYgzpLjyr9rVpMowg/exec";
+    
+    const payload = {
+      name: formData.name,
+      email: formData.email,
+      phone: formData.phone,
+      subject: formData.subject,
+      message: formData.message
+    };
+
+    try {
+      await fetch(activeUrl, {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: {
+          'Content-Type': 'text/plain'
+        },
+        body: JSON.stringify(payload)
+      });
       setLoading(false);
       setSubmitted(true);
-    }, 1400);
+    } catch (err) {
+      console.error('Error submitting contact form:', err);
+      setLoading(false);
+      setSubmitted(true);
+    }
   };
 
   return (
@@ -147,11 +170,11 @@ export default function ContactPage({ onBack }) {
                       value={formData.subject}
                       onChange={handleChange}
                     >
-                      <option value="">Select a topic</option>
-                      <option value="Buy Property">Buy a Property</option>
-                      <option value="Site Visit">Schedule a Site Visit</option>
-                      <option value="Investment">Investment Enquiry</option>
-                      <option value="General">General Enquiry</option>
+                      <option value="Select a topic">Select a topic</option>
+                      <option value="Buy a Property">Buy a Property</option>
+                      <option value="Schedule a Site Visit">Schedule a Site Visit</option>
+                      <option value="Investment Enquiry">Investment Enquiry</option>
+                      <option value="General Enquiry">General Enquiry</option>
                     </select>
                   </div>
                 </div>

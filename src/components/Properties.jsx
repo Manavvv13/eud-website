@@ -67,7 +67,7 @@ const MAIN_GALLERY_IMAGES = [
   '/gallery 3.jpg',
 ];
 
-export default function Properties({ onSeeAll }) {
+export default function Properties({ onSeeAll, onGoContest }) {
   const [activeImageIndex, setActiveImageIndex] = useState(0);
 
   const SLIDESHOW_PROPERTIES = [
@@ -209,23 +209,21 @@ export default function Properties({ onSeeAll }) {
           </div>
         </div>
 
-        {/* Column 2: Text Card Wrapper with inline bottom description */}
+        {/* Column 2: Image Card Wrapper with inline bottom description */}
         <div className="portfolio-col-text-wrapper">
-          <div className="portfolio-col-text">
-            <div className="text-card-content">
-              <h3 className="text-card-title">
-                Big things can<br />happen in small<br />spaces.
-              </h3>
-              <p className="text-card-desc">
-                With thoughtful design and smart organization, you can maximize every inch, making room for creativity
-              </p>
-              <button className="btn-details-custom">
-                Details
-              </button>
-            </div>
+          <div 
+            className="portfolio-col-text" 
+            style={{ padding: 0, overflow: 'hidden', background: '#eae5de', cursor: 'pointer' }}
+            onClick={onGoContest}
+          >
+            <img 
+              src="/Campaign.avif" 
+              alt="Campaign" 
+              style={{ width: '100%', height: '100%', objectFit: 'contain', display: 'block' }} 
+            />
           </div>
           <p className="portfolio-footer-desc-bottom">
-            Whether it's creating a cozy corner for relaxation or<br />transforming a small area into a workspace
+            Share your stories with us and win vouchers
           </p>
         </div>
 

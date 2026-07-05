@@ -9,6 +9,7 @@ import CTABanner from './components/CTABanner';
 import About from './components/About';
 import Footer from './components/Footer';
 import ContactPage from './components/ContactPage';
+import CampaignPage from './components/CampaignPage';
 
 function App() {
   const [searchCriteria, setSearchCriteria] = useState(null);
@@ -16,6 +17,7 @@ function App() {
     const hash = window.location.hash;
     if (hash === '#/properties') return 'all-properties';
     if (hash === '#/contact') return 'contact';
+    if (hash === '#/contest' || hash === '#/campaign') return 'campaign';
     return 'home';
   });
 
@@ -44,6 +46,7 @@ function App() {
       const hash = window.location.hash;
       if (hash === '#/properties') setCurrentView('all-properties');
       else if (hash === '#/contact') setCurrentView('contact');
+      else if (hash === '#/contest' || hash === '#/campaign') setCurrentView('campaign');
       else setCurrentView('home');
     };
     window.addEventListener('hashchange', handleHashChange);
@@ -69,7 +72,11 @@ function App() {
         <>
           <Hero onSearch={handleSearch} />
           <main>
-            <Properties searchCriteria={searchCriteria} onSeeAll={() => navigateTo('all-properties', '#/properties')} />
+            <Properties 
+              searchCriteria={searchCriteria} 
+              onSeeAll={() => navigateTo('all-properties', '#/properties')} 
+              onGoContest={() => navigateTo('campaign', '#/contest')}
+            />
             <FAQ />
             <Testimonials />
             <CTABanner onContact={handleGoContact} />
@@ -84,6 +91,8 @@ function App() {
             navigateTo('home', '#/');
           }}
         />
+      ) : currentView === 'campaign' ? (
+        <CampaignPage onBack={handleGoHome} />
       ) : (
         <ContactPage onBack={handleGoHome} />
       )}
