@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { ArrowLeft, ArrowRight, Play } from 'lucide-react';
 
 // Helper component for count-up animation when entering viewport
@@ -67,7 +68,11 @@ const MAIN_GALLERY_IMAGES = [
   '/gallery 3.jpg',
 ];
 
-export default function Properties({ onSeeAll, onGoContest }) {
+export default function Properties() {
+  const navigate = useNavigate();
+  const onSeeAll = () => navigate('/properties');
+  const onGoContest = () => navigate('/campaign');
+
   const [activeImageIndex, setActiveImageIndex] = useState(0);
 
   const SLIDESHOW_PROPERTIES = [

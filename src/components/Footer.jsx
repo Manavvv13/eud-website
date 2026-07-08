@@ -1,25 +1,23 @@
 import React from 'react';
+import { useNavigate, useLocation } from 'react-router-dom';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
+  const navigate = useNavigate();
+  const location = useLocation();
 
   const handleFooterLinkClick = (e, targetId) => {
     e.preventDefault();
-    if (window.location.hash === '#/properties') {
-      window.location.hash = '#/';
-      setTimeout(() => {
-        // If targetId is 'contact', we scroll to footer since contact form is removed
-        const finalId = targetId === 'contact' ? 'footer' : targetId;
-        const element = document.getElementById(finalId);
+    if (targetId === 'contact') {
+      navigate('/contact');
+    } else {
+      if (location.pathname === '/') {
+        const element = document.getElementById(targetId);
         if (element) {
           element.scrollIntoView({ behavior: 'smooth' });
         }
-      }, 150);
-    } else {
-      const finalId = targetId === 'contact' ? 'footer' : targetId;
-      const element = document.getElementById(finalId);
-      if (element) {
-        element.scrollIntoView({ behavior: 'smooth' });
+      } else {
+        navigate('/', { state: { scrollTo: targetId } });
       }
     }
   };
@@ -51,14 +49,14 @@ export default function Footer() {
       {/* Nav row — links left, logo + socials center, links right */}
       <div className="footer-new-nav">
         <nav className="footer-new-nav-links">
-          <a href="#home" onClick={(e) => handleFooterLinkClick(e, 'properties')}>Home</a>
+          <a href="#home" onClick={(e) => handleFooterLinkClick(e, 'home')}>Home</a>
           <a href="#about" onClick={(e) => handleFooterLinkClick(e, 'about')}>About</a>
-          <a href="#properties" onClick={(e) => handleFooterLinkClick(e, 'properties')}>Properties</a>
+          <a href="#properties" onClick={(e) => handleFooterLinkClick(e, 'premier-houses')}>Properties</a>
           <a href="#services" onClick={(e) => handleFooterLinkClick(e, 'about')}>Services</a>
         </nav>
         
         <div className="footer-new-center-group">
-          <div className="footer-new-logo" style={{ cursor: 'pointer' }} onClick={() => window.location.hash = '#/'}>EUD Group</div>
+          <div className="footer-new-logo" style={{ cursor: 'pointer' }} onClick={() => navigate('/')}>EUD Group</div>
           <div className="footer-new-socials">
             <a href="https://www.instagram.com/eud_group/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="footer-social-link">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -89,9 +87,9 @@ export default function Footer() {
         </div>
 
         <nav className="footer-new-nav-links footer-new-nav-right">
-          <a href="#properties" onClick={(e) => handleFooterLinkClick(e, 'properties')}>Gallery</a>
+          <a href="#properties" onClick={(e) => handleFooterLinkClick(e, 'premier-houses')}>Gallery</a>
           <a href="#faq" onClick={(e) => handleFooterLinkClick(e, 'faq')}>FAQ</a>
-          <a href="#properties" onClick={(e) => handleFooterLinkClick(e, 'properties')}>Pricing</a>
+          <a href="#properties" onClick={(e) => handleFooterLinkClick(e, 'premier-houses')}>Pricing</a>
           <a href="#contact" onClick={(e) => handleFooterLinkClick(e, 'contact')}>Contact</a>
         </nav>
       </div>

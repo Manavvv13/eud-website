@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate, useLocation } from 'react-router-dom';
 import { ArrowLeft, Search, SlidersHorizontal, Eye, X, ChevronLeft, ChevronRight } from 'lucide-react';
 
 const ALL_PROPERTIES = [
@@ -392,8 +393,13 @@ function CustomDropdown({ value, options, onChange, icon }) {
   );
 }
 
-export default function AllProperties({ initialSearch, onBack }) {
-  const [search, setSearch] = useState(initialSearch || '');
+export default function AllProperties() {
+  const navigate = useNavigate();
+  const location = useLocation();
+  const initialSearch = location.state?.searchCriteria || '';
+  const onBack = () => navigate('/');
+
+  const [search, setSearch] = useState(initialSearch);
   const [statusFilter, setStatusFilter] = useState('All');
   const [locationFilter, setLocationFilter] = useState('All');
   const [selectedProperty, setSelectedProperty] = useState(null);

@@ -1,7 +1,10 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { ArrowLeft, Send, CheckCircle, Gift } from 'lucide-react';
 
-export default function CampaignPage({ onBack }) {
+export default function CampaignPage() {
+  const navigate = useNavigate();
+  const onBack = () => navigate('/');
   const [formData, setFormData] = useState({
     story: '',
     name: '',

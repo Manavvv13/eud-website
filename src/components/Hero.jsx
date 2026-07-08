@@ -1,10 +1,16 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import SearchBar from './SearchBar';
 
-export default function Hero({ onSearch }) {
+export default function Hero() {
   const [activeCategory, setActiveCategory] = useState('House');
+  const navigate = useNavigate();
 
   const categories = ['House', 'Apartment', 'Residential'];
+
+  const handleSearch = (criteria) => {
+    navigate('/properties', { state: { searchCriteria: criteria } });
+  };
 
   return (
     <section id="home" className="hero-section">
@@ -49,7 +55,7 @@ export default function Hero({ onSearch }) {
 
         {/* Overlay Search Bar */}
         <div className="hero-search-wrapper">
-          <SearchBar onSearch={onSearch} />
+          <SearchBar onSearch={handleSearch} />
         </div>
       </div>
     </section>

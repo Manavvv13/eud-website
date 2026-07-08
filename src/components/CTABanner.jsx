@@ -1,7 +1,10 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 
-export default function CTABanner({ onContact }) {
+export default function CTABanner() {
+  const navigate = useNavigate();
+
   return (
     <section className="cta-banner-section">
       {/* Background image with dark overlay */}
@@ -22,7 +25,7 @@ export default function CTABanner({ onContact }) {
         <p className="cta-banner-subtitle">
           Explore a curated selection of properties that align with your vision and goals.
         </p>
-        <button className="cta-banner-btn" onClick={onContact}>
+        <button className="cta-banner-btn" onClick={() => navigate('/contact')}>
           Get Started <ArrowRight size={15} />
         </button>
       </div>

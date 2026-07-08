@@ -1,9 +1,13 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 
-export default function Navbar({ onContact }) {
+export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  
+  const navigate = useNavigate();
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -19,20 +23,13 @@ export default function Navbar({ onContact }) {
 
   const handleNavClick = (e, targetId) => {
     e.preventDefault();
-    if (window.location.hash === '#/properties') {
-      window.location.hash = '#/';
-      // Delay slightly to allow the home view to mount and render sections in DOM
-      setTimeout(() => {
-        const element = document.getElementById(targetId);
-        if (element) {
-          element.scrollIntoView({ behavior: 'smooth' });
-        }
-      }, 150);
-    } else {
+    if (location.pathname === '/') {
       const element = document.getElementById(targetId);
       if (element) {
         element.scrollIntoView({ behavior: 'smooth' });
       }
+    } else {
+      navigate('/', { state: { scrollTo: targetId } });
     }
     setMobileMenuOpen(false);
   };
@@ -57,7 +54,7 @@ export default function Navbar({ onContact }) {
 
         {/* Right Side Buttons */}
         <div className="navbar-right">
-          <button className="btn-contact-nav" onClick={onContact}>
+          <button className="btn-contact-nav" onClick={() => navigate('/contact')}>
             Contact Us
           </button>
           
@@ -82,7 +79,7 @@ export default function Navbar({ onContact }) {
           <a href="#premier-houses" onClick={(e) => handleNavClick(e, 'premier-houses')} className="mobile-dropdown-link">Properties</a>
           <a href="#about" onClick={(e) => handleNavClick(e, 'about')} className="mobile-dropdown-link">Services</a>
           
-          <button className="btn-contact-mobile-menu" onClick={(e) => { setMobileMenuOpen(false); onContact(); }}>
+          <button className="btn-contact-mobile-menu" onClick={() => { setMobileMenuOpen(false); navigate('/contact'); }}>
             Contact Us
           </button>
         </div>
