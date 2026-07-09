@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { useNavigate, useLocation } from 'react-router-dom';
-import { ArrowLeft, Search, SlidersHorizontal, Eye, X, ChevronLeft, ChevronRight } from 'lucide-react';
+import { useNavigate, useLocation, useSearchParams } from 'react-router-dom';
+import { ArrowLeft, Search, SlidersHorizontal, Eye } from 'lucide-react';
+import PropertyDetailsPage from './PropertyDetailsPage';
 
 const ALL_PROPERTIES = [
   {
@@ -402,22 +403,17 @@ export default function AllProperties() {
   const [search, setSearch] = useState(initialSearch);
   const [statusFilter, setStatusFilter] = useState('All');
   const [locationFilter, setLocationFilter] = useState('All');
-  const [selectedProperty, setSelectedProperty] = useState(null);
-  const [activeImage, setActiveImage] = useState(null);
+  const [searchParams, setSearchParams] = useSearchParams();
+  const propertyId = searchParams.get('id');
+
+  const selectedProperty = propertyId
+    ? ALL_PROPERTIES.find(p => p.id === parseInt(propertyId, 10))
+    : null;
 
   // Sync initialSearch if it updates from parent
   useEffect(() => {
     setSearch(initialSearch || '');
   }, [initialSearch]);
-
-  // Sync activeImage when selectedProperty changes
-  useEffect(() => {
-    if (selectedProperty) {
-      setActiveImage(selectedProperty.image);
-    } else {
-      setActiveImage(null);
-    }
-  }, [selectedProperty]);
   
   // Pagination State
   const [currentPage, setCurrentPage] = useState(1);
@@ -438,19 +434,7 @@ export default function AllProperties() {
     }, 50);
   }, []);
 
-  const handlePrevImage = () => {
-    if (!selectedProperty?.gallery || selectedProperty.gallery.length <= 1) return;
-    const currentIdx = selectedProperty.gallery.indexOf(activeImage || selectedProperty.image);
-    const prevIdx = (currentIdx - 1 + selectedProperty.gallery.length) % selectedProperty.gallery.length;
-    setActiveImage(selectedProperty.gallery[prevIdx]);
-  };
 
-  const handleNextImage = () => {
-    if (!selectedProperty?.gallery || selectedProperty.gallery.length <= 1) return;
-    const currentIdx = selectedProperty.gallery.indexOf(activeImage || selectedProperty.image);
-    const nextIdx = (currentIdx + 1) % selectedProperty.gallery.length;
-    setActiveImage(selectedProperty.gallery[nextIdx]);
-  };
 
   // Reset to first page when search or filters change
   useEffect(() => {
@@ -499,6 +483,15 @@ export default function AllProperties() {
     { value: 'Greater Noida', label: 'Greater Noida' },
     { value: 'Yamuna Expressway', label: 'Yamuna Expressway' }
   ];
+
+  if (selectedProperty) {
+    return (
+      <PropertyDetailsPage
+        property={selectedProperty}
+        onBack={() => setSearchParams({})}
+      />
+    );
+  }
 
   return (
     <div className="all-properties-page page-enter">
@@ -593,7 +586,7 @@ export default function AllProperties() {
                         <strong>Amenities:</strong> {p.amenities.slice(0, 3).join(', ')}{p.amenities.length > 3 ? '...' : ''}
                       </div>
 
-                      <button className="btn-view-details-dir" onClick={() => setSelectedProperty(p)}>
+                      <button className="btn-view-details-dir" onClick={() => setSearchParams({ id: p.id })}>
                         <Eye size={14} /> <span>View Details</span>
                       </button>
                     </div>
@@ -653,105 +646,7 @@ export default function AllProperties() {
         </div>
       </div>
 
-      {/* Property Details Modal */}
-      {selectedProperty && (
-        <div className="property-modal-overlay" onClick={() => setSelectedProperty(null)}>
-          <div className="property-modal-card" onClick={(e) => e.stopPropagation()}>
-            <button className="btn-close-modal" onClick={() => setSelectedProperty(null)}>
-              <X size={20} />
-            </button>
-            <div className="modal-content-grid">
-              <div className="modal-image-col">
-                <div className="modal-main-img-wrapper">
-                  <img src={activeImage || selectedProperty.image} alt={selectedProperty.name} className="modal-main-img" />
-                  
-                  {selectedProperty.gallery && selectedProperty.gallery.length > 1 && (
-                    <>
-                      <button 
-                        type="button" 
-                        className="modal-gallery-nav-btn prev"
-                        onClick={(e) => {
-                          e.stopPropagation();
-                          handlePrevImage();
-                        }}
-                        aria-label="Previous image"
-                      >
-                        <ChevronLeft size={22} />
-                      </button>
-                      <button 
-                        type="button" 
-                        className="modal-gallery-nav-btn next"
-                        onClick={(e) => {
-                          e.stopPropagation();
-                          handleNextImage();
-                        }}
-                        aria-label="Next image"
-                      >
-                        <ChevronRight size={22} />
-                      </button>
-                    </>
-                  )}
-                </div>
-                {/* Gallery Thumbnails */}
-                {selectedProperty.gallery && selectedProperty.gallery.length > 0 && (
-                  <div className="modal-gallery-thumbs-row">
-                    {selectedProperty.gallery.map((imgUrl, idx) => (
-                      <button 
-                        key={idx}
-                        type="button"
-                        className={`modal-gallery-thumb-btn ${(activeImage || selectedProperty.image) === imgUrl ? 'active' : ''}`}
-                        onClick={() => setActiveImage(imgUrl)}
-                      >
-                        <img src={imgUrl} alt={`Thumbnail ${idx + 1}`} className="modal-gallery-thumb-img" />
-                      </button>
-                    ))}
-                  </div>
-                )}
-              </div>
-              <div className="modal-details-col">
-                <span className="modal-badge">{selectedProperty.status}</span>
-                <h2 className="modal-title">{selectedProperty.name}</h2>
-                <p className="modal-location">{selectedProperty.type} &bull; {selectedProperty.location}</p>
-                <div className="modal-price-tag">{selectedProperty.price}</div>
-                
-                <div className="modal-quick-specs">
-                  <div className="spec-pill">
-                    <strong>Beds:</strong> {selectedProperty.beds}
-                  </div>
-                  <div className="spec-pill">
-                    <strong>Area:</strong> {selectedProperty.area}
-                  </div>
-                </div>
 
-                <div className="modal-amenities-section" style={{ marginBottom: '20px', width: '100%' }}>
-                  <h4 style={{ fontSize: '13.5px', fontWeight: '700', marginBottom: '8px', color: '#0F172A' }}>Amenities:</h4>
-                  <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
-                    {selectedProperty.amenities.map((am, i) => (
-                      <span key={i} style={{ background: '#F1F5F9', padding: '4px 10px', borderRadius: '6px', fontSize: '12px', color: '#475569' }}>
-                        {am}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-
-                <p className="modal-desc">{selectedProperty.desc}</p>
-
-                <div className="modal-cta-actions">
-                  <a 
-                    href={`https://wa.me/919999888990?text=${encodeURIComponent(`Hi, I'm interested in inquiring about "${selectedProperty.name}" property.`)}`} 
-                    target="_blank" 
-                    rel="noopener noreferrer" 
-                    className="modal-btn-primary"
-                    style={{ textAlign: 'center', display: 'inline-flex', alignItems: 'center', justifyContent: 'center' }}
-                  >
-                    Enquire Now
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
     </div>
   );
 }
