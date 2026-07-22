@@ -53,9 +53,12 @@ html {
   scroll-behavior: smooth;
   background-color: var(--bg-light);
   color: var(--text-dark);
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 body {
+  max-width: 100%;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -1646,6 +1649,9 @@ button {
 }
 
 @media (max-width: 768px) {
+  .navbar-container {
+    padding: 16px 20px;
+  }
   .hero-title {
     font-size: 36px;
     letter-spacing: -1.2px;
@@ -1666,6 +1672,20 @@ button {
     justify-content: center;
     padding-top: 100px;
     padding-bottom: 60px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .discover-map-content-wrapper {
+    padding: 0 20px;
+  }
+  .premier-houses-inner {
+    padding: 0 20px;
+  }
+  .faq-inner {
+    padding: 0 20px;
+  }
+  .testimonials-inner {
+    padding: 0 20px;
   }
   .search-inputs-grid {
     grid-template-columns: 1fr;
