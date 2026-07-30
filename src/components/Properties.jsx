@@ -76,11 +76,14 @@ export default function Properties() {
   const [activeImageIndex, setActiveImageIndex] = useState(0);
 
   const SLIDESHOW_PROPERTIES = [
-    { name: 'CRC Joyous',      image: '/Properties/CRC Joyous/CRCJ 1.avif',        priceLabel: 'Pricing Start at ₹1.30 Cr' },
-    { name: 'CRC Maesta',      image: '/Properties/CRC Maesta/CRCM 1.avif',         priceLabel: 'Pricing Start at ₹2.32 Cr' },
-    { name: 'Irish Platinum',  image: '/Properties/Irish Platinum/IP 1.avif',        priceLabel: 'Pricing Start at ₹1.69 Cr' },
-    { name: 'Elite X',         image: '/Properties/Elite X/EX 1.avif',              priceLabel: 'Pricing Start at ₹1.85 Cr' },
-    { name: 'VVIP Addresses',  image: '/Properties/VVIP Addresses/VVIP 1.avif',     priceLabel: 'Pricing Start at ₹2.10 Cr' },
+    { name: 'CRC Joyous',           image: '/Properties/CRC Joyous/CRCJ 1.avif',               priceLabel: 'Pricing Start at ₹1.30 Cr' },
+    { name: 'CRC Maesta',           image: '/Properties/CRC Maesta/CRCM 1.avif',                priceLabel: 'Pricing Start at ₹2.32 Cr' },
+    { name: 'Irish Platinum',       image: '/Properties/Irish Platinum/IP 1.avif',               priceLabel: 'Pricing Start at ₹1.69 Cr' },
+    { name: 'Elite X',              image: '/Properties/Elite X/EX 1.avif',                     priceLabel: 'Pricing Start at ₹1.85 Cr' },
+    { name: 'VVIP Addresses',       image: '/Properties/VVIP Addresses/VVIP 1.avif',            priceLabel: 'Pricing Start at ₹2.10 Cr' },
+    { name: 'Arihant One',          image: '/Properties/Arihant One/AO1.avif',                 priceLabel: 'Pricing Start at ₹1.40 Cr' },
+    { name: 'Godrej Majesty',       image: '/Properties/Godrej Majesty/GM1.avif',              priceLabel: 'Pricing Start at ₹2.40 Cr' },
+    { name: 'Sublime Spring Elmas', image: '/Properties/Sublime Spring Elmas/SSE1.avif',       priceLabel: 'Pricing Start at ₹1.35 Cr' },
   ];
 
   const TOTAL = SLIDESHOW_PROPERTIES.length;
@@ -366,7 +369,7 @@ export default function Properties() {
         <div className="premier-houses-grid">
 
           {/* Card 1 - CRC Joyous */}
-          <div className="premier-card">
+          <div className="premier-card" style={{ cursor: 'pointer' }} onClick={() => navigate('/properties?id=1')}>
             <div className="premier-card-img-wrapper">
               <img src="/Properties/CRC Joyous/CRCJ 1.avif" alt="CRC Joyous" className="premier-card-img" />
               <span className="premier-card-badge">Under Construction</span>
@@ -385,7 +388,7 @@ export default function Properties() {
           </div>
 
           {/* Card 2 - CRC Maesta */}
-          <div className="premier-card">
+          <div className="premier-card" style={{ cursor: 'pointer' }} onClick={() => navigate('/properties?id=2')}>
             <div className="premier-card-img-wrapper">
               <img src="/Properties/CRC Maesta/CRCM 1.avif" alt="CRC Maesta" className="premier-card-img" />
               <span className="premier-card-badge">Under Construction</span>
@@ -404,7 +407,7 @@ export default function Properties() {
           </div>
 
           {/* Card 3 - Irish Platinum */}
-          <div className="premier-card">
+          <div className="premier-card" style={{ cursor: 'pointer' }} onClick={() => navigate('/properties?id=3')}>
             <div className="premier-card-img-wrapper">
               <img src="/Properties/Irish Platinum/IP 1.avif" alt="Irish Platinum" className="premier-card-img" />
               <span className="premier-card-badge">Under Construction</span>
@@ -423,7 +426,7 @@ export default function Properties() {
           </div>
 
           {/* Card 4 - Elite X */}
-          <div className="premier-card">
+          <div className="premier-card" style={{ cursor: 'pointer' }} onClick={() => navigate('/properties?id=4')}>
             <div className="premier-card-img-wrapper">
               <img src="/Properties/Elite X/EX 1.avif" alt="Elite X" className="premier-card-img" />
               <span className="premier-card-badge">Under Construction</span>
@@ -442,7 +445,7 @@ export default function Properties() {
           </div>
 
           {/* Card 5 - VVIP Addresses */}
-          <div className="premier-card">
+          <div className="premier-card" style={{ cursor: 'pointer' }} onClick={() => navigate('/properties?id=5')}>
             <div className="premier-card-img-wrapper">
               <img src="/Properties/VVIP Addresses/VVIP 1.avif" alt="VVIP Addresses" className="premier-card-img" />
               <span className="premier-card-badge">Under Construction</span>
@@ -460,21 +463,59 @@ export default function Properties() {
             </div>
           </div>
 
-          {/* Card 6 - Nirala Trio */}
-          <div className="premier-card" style={{ display: 'none' }}>
+          {/* Card 6 - Arihant One */}
+          <div className="premier-card" style={{ cursor: 'pointer' }} onClick={() => navigate('/properties?id=7')}>
             <div className="premier-card-img-wrapper">
-              <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=800&q=80" alt="Nirala Trio" className="premier-card-img" />
+              <img src="/Properties/Arihant One/AO1.avif" alt="Arihant One" className="premier-card-img" />
               <span className="premier-card-badge">Under Construction</span>
             </div>
             <div className="premier-card-body">
               <div className="premier-card-meta">
                 <span className="premier-card-meta-item">Apartment</span>
                 <span className="premier-card-dot">·</span>
-                <span className="premier-card-meta-item">Sec 2, Greater Noida West</span>
+                <span className="premier-card-meta-item">Sector 1 Greater Noida West</span>
               </div>
-              <h3 className="premier-card-name">Nirala Trio</h3>
+              <h3 className="premier-card-name">Arihant One</h3>
               <p className="premier-card-price-row">
-                <span className="premier-card-price">₹1.95 Cr – ₹3.75 Cr</span>
+                <span className="premier-card-price">₹1.40 Cr – ₹2.40 Cr</span>
+              </p>
+            </div>
+          </div>
+
+          {/* Card 7 - Godrej Majesty */}
+          <div className="premier-card" style={{ cursor: 'pointer' }} onClick={() => navigate('/properties?id=9')}>
+            <div className="premier-card-img-wrapper">
+              <img src="/Properties/Godrej Majesty/GM1.avif" alt="Godrej Majesty" className="premier-card-img" />
+              <span className="premier-card-badge">Under Construction</span>
+            </div>
+            <div className="premier-card-body">
+              <div className="premier-card-meta">
+                <span className="premier-card-meta-item">Apartment</span>
+                <span className="premier-card-dot">·</span>
+                <span className="premier-card-meta-item">Sector 12 Greater Noida West</span>
+              </div>
+              <h3 className="premier-card-name">Godrej Majesty</h3>
+              <p className="premier-card-price-row">
+                <span className="premier-card-price">₹2.40 Cr – ₹4.90 Cr</span>
+              </p>
+            </div>
+          </div>
+
+          {/* Card 8 - Sublime Spring Elmas */}
+          <div className="premier-card" style={{ cursor: 'pointer' }} onClick={() => navigate('/properties?id=10')}>
+            <div className="premier-card-img-wrapper">
+              <img src="/Properties/Sublime Spring Elmas/SSE1.avif" alt="Sublime Spring Elmas" className="premier-card-img" />
+              <span className="premier-card-badge">Under Construction</span>
+            </div>
+            <div className="premier-card-body">
+              <div className="premier-card-meta">
+                <span className="premier-card-meta-item">Apartment</span>
+                <span className="premier-card-dot">·</span>
+                <span className="premier-card-meta-item">Sector 12 Noida Extension</span>
+              </div>
+              <h3 className="premier-card-name">Sublime Spring Elmas</h3>
+              <p className="premier-card-price-row">
+                <span className="premier-card-price">₹1.35 Cr – ₹2.60 Cr</span>
               </p>
             </div>
           </div>

@@ -5,38 +5,38 @@ const TESTIMONIALS = [
   {
     id: 1,
     quote: "Working with this team was a pleasure. They understood our vision and helped us find a property that exceeded our expectations. We couldn't have done it without them!",
-    name: 'Sajibur Rahman',
-    role: 'UI UX Designer',
-    image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=600&q=80',
+    name: 'Sajibur Rahman & Family',
+    role: 'Homeowners, Greater Noida West',
+    image: '/Testimonials/indian_family_1.jpg',
   },
   {
     id: 2,
     quote: "An absolutely seamless experience from start to finish. The team guided us through every step and made what could have been a stressful process feel effortless and exciting.",
-    name: 'Priya Sharma',
-    role: 'Product Manager',
-    image: 'https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?auto=format&fit=crop&w=600&q=80',
+    name: 'Priya & Amit Sharma',
+    role: 'Homeowners, Noida Extension',
+    image: '/Testimonials/indian_family_2.jpg',
   },
   {
     id: 3,
     quote: "They found us our dream home in under two weeks. Their market knowledge and responsiveness were outstanding. I would recommend EUD to anyone looking for premium real estate.",
-    name: 'Marcus Johnson',
-    role: 'Entrepreneur',
-    image: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=600&q=80',
+    name: 'Vikram & Neha Kapoor',
+    role: 'Property Investors, Noida',
+    image: '/Testimonials/indian_family_3.jpg',
   },
   {
     id: 4,
     quote: "Exceptional service and deep expertise in the market. They helped us navigate complex negotiations and secured our investment property at a great value. Truly professional.",
-    name: 'Aisha Patel',
-    role: 'Financial Analyst',
-    image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=600&q=80',
+    name: 'Aisha & Rajesh Patel',
+    role: 'Homeowners, Yamuna Expressway',
+    image: '/Testimonials/indian_family_4.jpg',
   },
 ];
 
 const AVATAR_URLS = [
-  'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=80&q=80',
-  'https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?auto=format&fit=crop&w=80&q=80',
-  'https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=80&q=80',
-  'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=80&q=80',
+  '/Testimonials/indian_family_1.jpg',
+  '/Testimonials/indian_family_2.jpg',
+  '/Testimonials/indian_family_3.jpg',
+  '/Testimonials/indian_family_4.jpg',
 ];
 
 

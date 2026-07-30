@@ -6,24 +6,9 @@ const PREVIEW_PROPERTIES = [
   { name: 'Irish Platinum', location: 'Sector 10 Greater Noida West', type: 'Apartment' },
   { name: 'Elite X', location: 'Sector 10 Greater Noida West', type: 'Apartment' },
   { name: 'VVIP Addresses', location: 'Sector 12 Greater Noida West', type: 'Apartment' },
-  { name: 'Nirala Trio', location: 'Sector 2 Greater Noida West', type: 'Apartment' },
   { name: 'Arihant One', location: 'Sector 1 Greater Noida West', type: 'Apartment' },
-  { name: 'Ashtech', location: 'Sector 12 Greater Noida West', type: 'Apartment' },
   { name: 'Godrej Majesty', location: 'Sector 12 Greater Noida West', type: 'Apartment' },
-  { name: 'Spring Elmas', location: 'Sector 12 Noida Extension', type: 'Apartment' },
-  { name: 'Ace Hanei', location: 'Sector 150 Noida', type: 'Apartment' },
-  { name: 'Nirala Estate', location: 'Techzone 4 Noida Extension', type: 'Apartment' },
-  { name: 'Arihant Abode', location: 'Sector 10 Noida Extension', type: 'Apartment' },
-  { name: 'Sobha Rivana', location: 'Sector 1 Greater Noida West', type: 'Apartment' },
-  { name: 'Max', location: 'Sector 128 Noida', type: 'Apartment' },
-  { name: 'Experion', location: 'Sector 45 Noida', type: 'Apartment' },
-  { name: 'Elie Saab Residencies', location: 'Sector 150 Noida', type: 'Apartment' },
-  { name: 'Nirala Gateway (Commercial)', location: 'Sector 16B Greater Noida West', type: 'Commercial' },
-  { name: 'Nirala Diadem(Commercial)', location: 'Sector 2 Greater Noida West', type: 'Commercial' },
-  { name: 'KB West Walk (Commercial)', location: 'Sector 12 Greater Noida West', type: 'Commercial' },
-  { name: 'IRIS Trehan (Commercial)', location: 'Sector 1 Noida', type: 'Commercial' },
-  { name: 'Gaur Chrysalis', location: 'Sector 22D Yamuna Expressway', type: 'Apartment' },
-  { name: 'Eldeco Yamuna', location: 'Sector 22D Yamuna Expressway', type: 'Apartment' }
+  { name: 'Sublime Spring Elmas', location: 'Sector 12 Noida Extension', type: 'Apartment' }
 ];
 
 export default function SearchBar({ onSearch }) {

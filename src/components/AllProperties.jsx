@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate, useLocation, useSearchParams } from 'react-router-dom';
-import { ArrowLeft, Search, SlidersHorizontal, Eye } from 'lucide-react';
+import { ArrowLeft, Search, SlidersHorizontal, Eye, Download } from 'lucide-react';
 import PropertyDetailsPage from './PropertyDetailsPage';
+import BrochureModal from './BrochureModal';
 
 const ALL_PROPERTIES = [
   {
@@ -110,43 +111,25 @@ const ALL_PROPERTIES = [
     amenities: ['Cricket Stadium', 'Clubhouse', 'Swimming Pool', '24/7 Power', 'Shopping Plaza']
   },
   {
-    id: 6,
-    name: 'Nirala Trio',
-    location: 'Sector 2 Greater Noida West',
-    type: 'Apartment',
-    price: '₹1.15 Cr – ₹1.60 Cr',
-    status: 'Under Construction',
-    image: 'https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=800&q=80',
-    desc: 'Modern living at its best, featuring premium amenities, standard sports courts, and parks.',
-    beds: '3 BHK',
-    area: '1245 - 1590 sq.ft',
-    amenities: ['Gym', 'Yoga Lawn', 'Clubhouse', 'Basketball Court', 'Kids Pool']
-  },
-  {
     id: 7,
     name: 'Arihant One',
     location: 'Sector 1 Greater Noida West',
     type: 'Apartment',
     price: '₹1.40 Cr – ₹2.40 Cr',
     status: 'Under Construction',
-    image: 'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=800&q=80',
+    image: '/Properties/Arihant One/AO1.avif',
+    gallery: [
+      '/Properties/Arihant One/AO1.avif',
+      '/Properties/Arihant One/AO2.avif',
+      '/Properties/Arihant One/AO3.avif',
+      '/Properties/Arihant One/AO4.avif',
+      '/Properties/Arihant One/AO5.avif',
+      '/Properties/Arihant One/AO6.avif'
+    ],
     desc: 'Luxury residency offering exclusive double-height lobbies, high-speed elevators, and elite clubbing.',
     beds: '3 & 4 BHK',
     area: '1340 - 1760 sq.ft',
     amenities: ['Luxury Lobby', 'Squash Court', 'Swimming Pool', 'Clubhouse', 'Power Backup']
-  },
-  {
-    id: 8,
-    name: 'Ashtech',
-    location: 'Sector 12 Greater Noida West',
-    type: 'Apartment',
-    price: '₹2.50 Cr – ₹4.90 Cr',
-    status: 'Under Construction',
-    image: 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=80',
-    desc: 'A premium green living sanctuary focusing on active sports infrastructure and low-density layouts.',
-    beds: '3 & 4 BHK',
-    area: '1650 - 2450 sq.ft',
-    amenities: ['Wrap-around Balcony', 'Central AC', 'Swimming Pool', 'Gym', 'Landscape Gardens']
   },
   {
     id: 9,
@@ -155,7 +138,14 @@ const ALL_PROPERTIES = [
     type: 'Apartment',
     price: '₹2.40 Cr – ₹4.90 Cr',
     status: 'Under Construction',
-    image: 'https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=800&q=80',
+    image: '/Properties/Godrej Majesty/GM1.avif',
+    gallery: [
+      '/Properties/Godrej Majesty/GM1.avif',
+      '/Properties/Godrej Majesty/GM2.avif',
+      '/Properties/Godrej Majesty/GM3.avif',
+      '/Properties/Godrej Majesty/GM4.avif',
+      '/Properties/Godrej Majesty/GM 5.avif'
+    ],
     desc: 'Imperial resort living units flanked by golf views, curated forest landscapes, and luxury concierge.',
     beds: '3 & 4 BHK',
     area: '1450 - 2350 sq.ft',
@@ -163,185 +153,26 @@ const ALL_PROPERTIES = [
   },
   {
     id: 10,
-    name: 'Spring Elmas',
+    name: 'Sublime Spring Elmas',
     location: 'Sector 12 Noida Extension',
     type: 'Apartment',
     price: '₹1.35 Cr – ₹2.60 Cr',
     status: 'Under Construction',
-    image: 'https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=800&q=80',
+    image: '/Properties/Sublime Spring Elmas/SSE1.avif',
+    gallery: [
+      '/Properties/Sublime Spring Elmas/SSE1.avif',
+      '/Properties/Sublime Spring Elmas/SSE2.avif',
+      '/Properties/Sublime Spring Elmas/SSE3.avif',
+      '/Properties/Sublime Spring Elmas/SSE4.avif',
+      '/Properties/Sublime Spring Elmas/SSE5.avif',
+      '/Properties/Sublime Spring Elmas/SSE6.avif',
+      '/Properties/Sublime Spring Elmas/SSE7.avif',
+      '/Properties/Sublime Spring Elmas/SSE8.avif'
+    ],
     desc: 'Modernistic architecture equipped with high-end fixtures, wide open areas, and multi-tier security.',
     beds: '3 & 4 BHK',
     area: '1355 - 2450 sq.ft',
     amenities: ['High-speed Elevators', 'Gym', 'Kids Play Area', 'Sports Court', '24/7 Security']
-  },
-  {
-    id: 11,
-    name: 'Ace Hanei',
-    location: 'Sector 150 Noida',
-    type: 'Apartment',
-    price: '₹2.25 Cr – ₹4.50 Cr',
-    status: 'Under Construction',
-    image: 'https://images.unsplash.com/photo-1602941525421-8f8b81d3edbb?auto=format&fit=crop&w=800&q=80',
-    desc: 'Bespoke lifestyle apartments built with international structure standards and top sport amenities.',
-    beds: '3 & 4 BHK',
-    area: '2200 - 3200 sq.ft',
-    amenities: ['Sports Infrastructure', 'Luxury Clubhouse', 'Pool', 'Jogging Track', 'Tennis Court']
-  },
-  {
-    id: 12,
-    name: 'Nirala Estate',
-    location: 'Techzone 4 Noida Extension',
-    type: 'Apartment',
-    price: '₹1.05 Cr – ₹2.20 Cr',
-    status: 'Ready to Move',
-    image: 'https://images.unsplash.com/photo-1570129477492-45c003edd2be?auto=format&fit=crop&w=800&q=80',
-    desc: 'An established, fully functional township with lush green pathways, standard club, and retail stores.',
-    beds: '2, 3 & 4 BHK',
-    area: '950 - 1897 sq.ft',
-    amenities: ['Lush Green Parks', 'Swimming Pool', 'Gym', 'Retail Stores', 'Basketball Court']
-  },
-  {
-    id: 13,
-    name: 'Arihant Abode',
-    location: 'Sector 10 Noida Extension',
-    type: 'Apartment',
-    price: '₹95 Lakhs – ₹1.80 Cr',
-    status: 'Ready to Move',
-    image: 'https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6?auto=format&fit=crop&w=800&q=80',
-    desc: 'Smartly designed affordable luxury homes featuring excellent ventilation and structural stability.',
-    beds: '2 & 3 BHK',
-    area: '920 - 1270 sq.ft',
-    amenities: ['Clubhouse', 'Gym', 'Swimming Pool', 'Jogging Track', 'Kids Play Area']
-  },
-  {
-    id: 14,
-    name: 'Sobha Rivana',
-    location: 'Sector 1 Greater Noida West',
-    type: 'Apartment',
-    price: '₹1.70 Cr – ₹3.50 Cr',
-    status: 'Under Construction',
-    image: 'https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=800&q=80',
-    desc: 'Ultra-luxurious riverfront residences with private elevator access, double-height decks, and premium marble flooring.',
-    beds: '2, 3 & 4 BHK',
-    area: '1200 - 2100 sq.ft',
-    amenities: ['Living Rivulet', 'Massive Clubhouse', 'Pool', 'High-Rise Decks', '80% Open Area']
-  },
-  {
-    id: 15,
-    name: 'Max',
-    location: 'Sector 128 Noida',
-    type: 'Apartment',
-    price: '₹6.00 Cr – ₹12.00 Cr',
-    status: 'Under Construction',
-    image: 'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=800&q=80',
-    desc: 'Super-premium ultra-luxury boutique condominiums featuring panoramic golf vistas and smart services.',
-    beds: '4 BHK',
-    area: '2600 - 4500 sq.ft',
-    amenities: ['Panoramic Golf View', 'Boutique Club', 'Smart Automation', 'Concierge', 'Eco Filtration']
-  },
-  {
-    id: 16,
-    name: 'Experion',
-    location: 'Sector 45 Noida',
-    type: 'Apartment',
-    price: '₹4.20 Cr – ₹8.50 Cr',
-    status: 'Under Construction',
-    image: 'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=800&q=80',
-    desc: 'A premium residential complex with 100% power backup, top structural engineering, and sprawling clubs.',
-    beds: '3 & 4 BHK',
-    area: '1950 - 3200 sq.ft',
-    amenities: ['Modern Clubhouse', 'Swimming Pool', 'Gym', 'Spa', 'Active Sports Arena']
-  },
-  {
-    id: 17,
-    name: 'Elie Saab Residencies',
-    location: 'Sector 150 Noida',
-    type: 'Apartment',
-    price: '₹3.50 Cr – ₹7.20 Cr',
-    status: 'Under Construction',
-    image: 'https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=800&q=80',
-    desc: 'Signature luxury interior designer flats styled by Elie Saab, boasting unparalleled quality and style.',
-    beds: '3 & 4 BHK',
-    area: '1850 - 2750 sq.ft',
-    amenities: ['Elie Saab Interiors', 'Infinity Pool', 'Designer Lobby', 'Private Lounge', 'Clubhouse']
-  },
-  {
-    id: 18,
-    name: 'Nirala Gateway (Commercial)',
-    location: 'Sector 16B Greater Noida West',
-    type: 'Commercial',
-    price: '₹50 Lakhs – ₹2.50 Cr',
-    status: 'Under Construction',
-    image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80',
-    desc: 'A futuristic shopping complex and corporate office tower situated at a high footfall junction.',
-    beds: 'Shops & Offices',
-    area: '250 - 1200 sq.ft',
-    amenities: ['Food Court', 'High-speed Elevators', 'Ample Parking', 'CCTV Security', 'Retail Zone']
-  },
-  {
-    id: 19,
-    name: 'Nirala Diadem(Commercial)',
-    location: 'Sector 2 Greater Noida West',
-    type: 'Commercial',
-    price: '₹40 Lakhs – ₹1.90 Cr',
-    status: 'Under Construction',
-    image: 'https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80',
-    desc: 'Commercial plaza boasting retail showrooms, restaurants with open seating, and premium spaces.',
-    beds: 'Retail & Food Court',
-    area: '180 - 950 sq.ft',
-    amenities: ['Multiplex', 'Food Court', 'Open Terrace Dining', 'Escalators', 'CCTV Security']
-  },
-  {
-    id: 20,
-    name: 'KB West Walk (Commercial)',
-    location: 'Sector 12 Greater Noida West',
-    type: 'Commercial',
-    price: '₹60 Lakhs – ₹3.00 Cr',
-    status: 'Under Construction',
-    image: 'https://images.unsplash.com/photo-1554469384-e58fac16e23a?auto=format&fit=crop&w=800&q=80',
-    desc: 'Modern high-street retail stores and dynamic office suites offering premium infrastructure.',
-    beds: 'Shops & Suites',
-    area: '300 - 1500 sq.ft',
-    amenities: ['Central Courtyard', 'Escalators', 'Hypermarket Anchor', 'Power Backup', 'Double Lifts']
-  },
-  {
-    id: 21,
-    name: 'IRIS Trehan (Commercial)',
-    location: 'Sector 1 Noida',
-    type: 'Commercial',
-    price: '₹80 Lakhs – ₹4.20 Cr',
-    status: 'Ready to Move',
-    image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80',
-    desc: 'Ready-to-occupy retail spaces and premium business desks in the core commercial hub of Sector 1.',
-    beds: 'Office & Showroom',
-    area: '400 - 2500 sq.ft',
-    amenities: ['Multiplex', 'Double-Height Shops', 'Food Court Area', 'Modern Elevators', 'Wi-Fi Zone']
-  },
-  {
-    id: 22,
-    name: 'Gaur Chrysalis',
-    location: 'Sector 22D Yamuna Expressway',
-    type: 'Apartment',
-    price: '₹1.60 Cr – ₹2.80 Cr',
-    status: 'Under Construction',
-    image: 'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=800&q=80',
-    desc: 'Sprawling high-rise project positioned strategically along Yamuna Expressway, close to the airport site.',
-    beds: '3 & 4 BHK',
-    area: '1910 - 2495 sq.ft',
-    amenities: ['Hafeez Contractor Design', '75k sqft Clubhouse', 'Sky Gardens', 'Sports Facility']
-  },
-  {
-    id: 23,
-    name: 'Eldeco Yamuna',
-    location: 'Sector 22D Yamuna Expressway',
-    type: 'Apartment',
-    price: '₹1.10 Cr – ₹2.20 Cr',
-    status: 'Under Construction',
-    image: 'https://images.unsplash.com/photo-1570129477492-45c003edd2be?auto=format&fit=crop&w=800&q=80',
-    desc: 'Impeccably designed apartments offering unmatched quality and open-green landscaping.',
-    beds: '2 & 3 BHK',
-    area: '950 - 1450 sq.ft',
-    amenities: ['VRF Air Conditioning', 'Corner Unit Layout', 'Clubhouse', 'Pool', '78% Open Area']
   }
 ];
 
@@ -406,6 +237,8 @@ export default function AllProperties() {
   const [searchParams, setSearchParams] = useSearchParams();
   const propertyId = searchParams.get('id');
 
+  const [brochureProperty, setBrochureProperty] = useState(null);
+
   const selectedProperty = propertyId
     ? ALL_PROPERTIES.find(p => p.id === parseInt(propertyId, 10))
     : null;
@@ -442,7 +275,7 @@ export default function AllProperties() {
   }, [search, statusFilter, locationFilter]);
 
   // Filter properties logic
-  const filteredProperties = ALL_PROPERTIES.slice(0, 5).filter((p) => {
+  const filteredProperties = ALL_PROPERTIES.filter((p) => {
     const matchesSearch = p.name.toLowerCase().includes(search.toLowerCase()) || 
                           p.location.toLowerCase().includes(search.toLowerCase()) ||
                           p.type.toLowerCase().includes(search.toLowerCase());
@@ -586,9 +419,20 @@ export default function AllProperties() {
                         <strong>Amenities:</strong> {p.amenities.slice(0, 3).join(', ')}{p.amenities.length > 3 ? '...' : ''}
                       </div>
 
-                      <button className="btn-view-details-dir" onClick={() => setSearchParams({ id: p.id })}>
-                        <Eye size={14} /> <span>View Details</span>
-                      </button>
+                      <div className="card-actions-row">
+                        <button className="btn-view-details-dir" onClick={() => setSearchParams({ id: p.id })}>
+                          <Eye size={14} /> <span>View Details</span>
+                        </button>
+                        <button 
+                          className="btn-brochure-dir" 
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            setBrochureProperty(p);
+                          }}
+                        >
+                          <Download size={14} /> <span>Brochure</span>
+                        </button>
+                      </div>
                     </div>
                   </div>
                 ))}
@@ -646,6 +490,12 @@ export default function AllProperties() {
         </div>
       </div>
 
+      {/* Brochure Modal */}
+      <BrochureModal 
+        property={brochureProperty} 
+        isOpen={!!brochureProperty} 
+        onClose={() => setBrochureProperty(null)} 
+      />
 
     </div>
   );

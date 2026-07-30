@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { 
-  ArrowLeft, Share2, MapPin, X, ChevronLeft, ChevronRight,
+  ArrowLeft, Share2, MapPin, X, ChevronLeft, ChevronRight, Download,
   Building, Waves, Dumbbell, Activity, Smile, Cloud, Sparkles, Footprints, 
   Film, Trophy, Zap, ShoppingBag, Wind, Trees, UserCheck, ArrowUpDown, 
   ShieldCheck, HelpCircle 
 } from 'lucide-react';
+import BrochureModal from './BrochureModal';
 
 const getAmenityIcon = (name) => {
   const norm = name.toLowerCase();
@@ -30,6 +31,7 @@ const getAmenityIcon = (name) => {
 
 export default function PropertyDetailsPage({ property, onBack }) {
   const [showShareTooltip, setShowShareTooltip] = useState(false);
+  const [isBrochureOpen, setIsBrochureOpen] = useState(false);
   
   // Lightbox slideshow state
   const [isLightboxOpen, setIsLightboxOpen] = useState(false);
@@ -145,6 +147,13 @@ export default function PropertyDetailsPage({ property, onBack }) {
             </div>
           </div>
           <div className="detail-action-buttons">
+            <button 
+              className="detail-action-btn btn-brochure"
+              onClick={() => setIsBrochureOpen(true)}
+            >
+              <Download size={16} />
+              <span>Download Brochure</span>
+            </button>
             <div className="share-btn-wrapper">
               <button 
                 className="detail-action-btn btn-share" 
@@ -255,6 +264,10 @@ export default function PropertyDetailsPage({ property, onBack }) {
               <button className="btn-booking-submit" onClick={handleEnquire}>
                 Enquire Now
               </button>
+
+              <button className="btn-booking-brochure" onClick={() => setIsBrochureOpen(true)}>
+                <Download size={16} /> <span>Download Brochure</span>
+              </button>
             </div>
           </div>
         </div>
@@ -266,10 +279,22 @@ export default function PropertyDetailsPage({ property, onBack }) {
           <span className="mobile-price-label">Price Range</span>
           <div className="mobile-price-value">{property.price}</div>
         </div>
-        <button className="btn-mobile-enquire" onClick={handleEnquire}>
-          Enquire Now
-        </button>
+        <div className="mobile-bar-actions">
+          <button className="btn-mobile-brochure" onClick={() => setIsBrochureOpen(true)}>
+            <Download size={15} /> <span>Brochure</span>
+          </button>
+          <button className="btn-mobile-enquire" onClick={handleEnquire}>
+            Enquire Now
+          </button>
+        </div>
       </div>
+
+      {/* Brochure Modal */}
+      <BrochureModal 
+        property={property} 
+        isOpen={isBrochureOpen} 
+        onClose={() => setIsBrochureOpen(false)} 
+      />
 
       {/* Premium Fullscreen Gallery Lightbox Modal */}
       {isLightboxOpen && (
