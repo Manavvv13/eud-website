@@ -12,6 +12,7 @@ const ALL_PROPERTIES = [
     type: 'Apartment',
     price: '₹1.45 Cr – ₹3.15 Cr',
     status: 'Under Construction',
+    brochure: '/brochures/CRC Joyous Brochure.pdf',
     image: '/Properties/CRC Joyous/CRCJ 1.avif',
     gallery: [
       '/Properties/CRC Joyous/CRCJ 1.avif',
@@ -34,6 +35,7 @@ const ALL_PROPERTIES = [
     type: 'Apartment',
     price: '₹2.25 Cr – ₹3.80 Cr',
     status: 'Under Construction',
+    brochure: '/brochures/CRC Maesta Brochure.pdf',
     image: '/Properties/CRC Maesta/CRCM 1.avif',
     gallery: [
       '/Properties/CRC Maesta/CRCM 1.avif',
@@ -54,6 +56,7 @@ const ALL_PROPERTIES = [
     type: 'Apartment',
     price: '₹1.60 Cr – ₹3.20 Cr',
     status: 'Under Construction',
+    brochure: '/brochures/Irish Platinum Brochure.pdf',
     image: '/Properties/Irish Platinum/IP 1.avif',
     gallery: [
       '/Properties/Irish Platinum/IP 1.avif',

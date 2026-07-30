@@ -30,6 +30,32 @@ export default function BrochureModal({ property, isOpen, onClose }) {
     return errs;
   };
 
+  const downloadBrochure = (prop, user) => {
+    const brochureMap = {
+      'CRC Joyous': '/brochures/CRC Joyous Brochure.pdf',
+      'CRC Maesta': '/brochures/CRC Maesta Brochure.pdf',
+      'Irish Platinum': '/brochures/Irish Platinum Brochure.pdf',
+      'Elite X': '/brochures/Elite X Brochure.pdf',
+      'VVIP Addresses': '/brochures/VVIP Addresses Brochure.pdf',
+      'Arihant One': '/brochures/Arihant One Brochure.pdf',
+      'Godrej Majesty': '/brochures/Godrej Majesty Brochure.pdf',
+      'Sublime Spring Elmas': '/brochures/Sublime Spring Elmas Brochure.pdf',
+    };
+
+    const pdfUrl = prop.brochure || brochureMap[prop.name];
+
+    if (pdfUrl) {
+      const link = document.createElement('a');
+      link.href = pdfUrl;
+      link.download = `${prop.name} Brochure.pdf`;
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    } else {
+      generateBrochureFile(prop, user);
+    }
+  };
+
   const generateBrochureFile = (prop, user) => {
     const content = `================================================================================
                             EUD GROUP - OFFICIAL BROCHURE
@@ -113,7 +139,7 @@ Contact: +91 99998 88990 | Web: www.eudgroup.com
     setTimeout(() => {
       setIsSubmitting(false);
       setIsSuccess(true);
-      generateBrochureFile(property, formData);
+      downloadBrochure(property, formData);
 
       setTimeout(() => {
         setIsSuccess(false);
