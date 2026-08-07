@@ -463,60 +463,14 @@ export default function Properties() {
             </div>
           </div>
 
-          {/* Card 6 - Arihant One */}
-          <div className="premier-card" style={{ cursor: 'pointer' }} onClick={() => navigate('/properties?id=7')}>
-            <div className="premier-card-img-wrapper">
-              <img src="/Properties/Arihant One/AO1.avif" alt="Arihant One" className="premier-card-img" />
-              <span className="premier-card-badge">Under Construction</span>
-            </div>
-            <div className="premier-card-body">
-              <div className="premier-card-meta">
-                <span className="premier-card-meta-item">Apartment</span>
-                <span className="premier-card-dot">·</span>
-                <span className="premier-card-meta-item">Sector 1 Greater Noida West</span>
-              </div>
-              <h3 className="premier-card-name">Arihant One</h3>
-              <p className="premier-card-price-row">
-                <span className="premier-card-price">₹1.40 Cr – ₹2.40 Cr</span>
-              </p>
-            </div>
-          </div>
-
-          {/* Card 7 - Godrej Majesty */}
-          <div className="premier-card" style={{ cursor: 'pointer' }} onClick={() => navigate('/properties?id=9')}>
-            <div className="premier-card-img-wrapper">
-              <img src="/Properties/Godrej Majesty/GM1.avif" alt="Godrej Majesty" className="premier-card-img" />
-              <span className="premier-card-badge">Under Construction</span>
-            </div>
-            <div className="premier-card-body">
-              <div className="premier-card-meta">
-                <span className="premier-card-meta-item">Apartment</span>
-                <span className="premier-card-dot">·</span>
-                <span className="premier-card-meta-item">Sector 12 Greater Noida West</span>
-              </div>
-              <h3 className="premier-card-name">Godrej Majesty</h3>
-              <p className="premier-card-price-row">
-                <span className="premier-card-price">₹2.40 Cr – ₹4.90 Cr</span>
-              </p>
-            </div>
-          </div>
-
-          {/* Card 8 - Sublime Spring Elmas */}
-          <div className="premier-card" style={{ cursor: 'pointer' }} onClick={() => navigate('/properties?id=10')}>
-            <div className="premier-card-img-wrapper">
-              <img src="/Properties/Sublime Spring Elmas/SSE1.avif" alt="Sublime Spring Elmas" className="premier-card-img" />
-              <span className="premier-card-badge">Under Construction</span>
-            </div>
-            <div className="premier-card-body">
-              <div className="premier-card-meta">
-                <span className="premier-card-meta-item">Apartment</span>
-                <span className="premier-card-dot">·</span>
-                <span className="premier-card-meta-item">Sector 12 Noida Extension</span>
-              </div>
-              <h3 className="premier-card-name">Sublime Spring Elmas</h3>
-              <p className="premier-card-price-row">
-                <span className="premier-card-price">₹1.35 Cr – ₹2.60 Cr</span>
-              </p>
+          {/* Card 6 - Blurry Frosted Glass See All Card */}
+          <div className="premier-card premier-card-see-all-glass" onClick={onSeeAll}>
+            <div className="see-all-glass-inner">
+              <h3 className="see-all-glass-title">Explore All Properties</h3>
+              <button className="btn-see-all-white" onClick={(e) => { e.stopPropagation(); onSeeAll(); }}>
+                <span>See All Properties</span>
+                <ArrowRight size={15} />
+              </button>
             </div>
           </div>
 
