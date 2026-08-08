@@ -176,6 +176,121 @@ const ALL_PROPERTIES = [
     beds: '3 & 4 BHK',
     area: '1355 - 2450 sq.ft',
     amenities: ['High-speed Elevators', 'Gym', 'Kids Play Area', 'Sports Court', '24/7 Security']
+  },
+  {
+    id: 11,
+    name: 'Ace Hanei',
+    location: 'Sector 12 Greater Noida West',
+    type: 'Apartment',
+    price: '₹1.65 Cr – ₹3.20 Cr',
+    status: 'Under Construction',
+    image: '/Properties/Ace Hanei/AH1.avif',
+    gallery: [
+      '/Properties/Ace Hanei/AH1.avif',
+      '/Properties/Ace Hanei/AH2.avif',
+      '/Properties/Ace Hanei/AH3.avif',
+      '/Properties/Ace Hanei/AH4.avif',
+      '/Properties/Ace Hanei/AH5.avif',
+      '/Properties/Ace Hanei/AH6.avif'
+    ],
+    desc: 'Ultra-luxurious modern residences featuring grand entrance lobbies, high-speed elevators, and a world-class clubhouse.',
+    beds: '3 & 4 BHK',
+    area: '1400 - 2200 sq.ft',
+    amenities: ['Clubhouse', 'Swimming Pool', 'Gymnasium', '24/7 Security', 'Kids Play Area']
+  },
+  {
+    id: 12,
+    name: 'Arihant Abode',
+    location: 'Sector 10 Greater Noida West',
+    type: 'Apartment',
+    price: '₹1.15 Cr – ₹2.10 Cr',
+    status: 'Under Construction',
+    image: '/Properties/Arihant Abode/AA1.avif',
+    gallery: [
+      '/Properties/Arihant Abode/AA1.avif',
+      '/Properties/Arihant Abode/AA2.avif',
+      '/Properties/Arihant Abode/AA3.avif',
+      '/Properties/Arihant Abode/AA4.avif',
+      '/Properties/Arihant Abode/AA5.avif',
+      '/Properties/Arihant Abode/AA6.avif',
+      '/Properties/Arihant Abode/AA7.avif',
+      '/Properties/Arihant Abode/AA8.avif'
+    ],
+    desc: 'Premium affordable luxury apartments with smart floor layouts, open greens, and lifestyle amenities.',
+    beds: '2 & 3 BHK',
+    area: '1050 - 1650 sq.ft',
+    amenities: ['Swimming Pool', 'Gymnasium', 'Clubhouse', 'Jogging Track', 'Tennis Court']
+  },
+  {
+    id: 13,
+    name: 'Gaur Chrysalis',
+    location: 'Sector 1 Greater Noida West',
+    type: 'Apartment',
+    price: '₹1.85 Cr – ₹3.50 Cr',
+    status: 'Under Construction',
+    image: '/Properties/Gaur Chrysalis/GC1.avif',
+    gallery: [
+      '/Properties/Gaur Chrysalis/GC1.avif',
+      '/Properties/Gaur Chrysalis/GC2.avif',
+      '/Properties/Gaur Chrysalis/GC3.avif',
+      '/Properties/Gaur Chrysalis/GC4.avif',
+      '/Properties/Gaur Chrysalis/GC5.avif'
+    ],
+    desc: 'Iconic high-rise towers featuring contemporary architecture, landscaped gardens, and a luxury lifestyle club.',
+    beds: '3 & 4 BHK',
+    area: '1350 - 2100 sq.ft',
+    amenities: ['Sky Lounge', 'Clubhouse', 'Swimming Pool', 'Gymnasium', 'Amphitheatre']
+  },
+  {
+    id: 14,
+    name: 'Nirala Estate',
+    location: 'Techzone 4 Greater Noida West',
+    type: 'Apartment',
+    price: '₹1.25 Cr – ₹2.85 Cr',
+    status: 'Under Construction',
+    image: '/Properties/Nirala Estate/NE1.avif',
+    gallery: [
+      '/Properties/Nirala Estate/NE1.avif',
+      '/Properties/Nirala Estate/NE2.avif',
+      '/Properties/Nirala Estate/NE3.avif',
+      '/Properties/Nirala Estate/NE4.avif',
+      '/Properties/Nirala Estate/NE5.avif',
+      '/Properties/Nirala Estate/NE6.avif',
+      '/Properties/Nirala Estate/NE7.avif',
+      '/Properties/Nirala Estate/NE8.avif',
+      '/Properties/Nirala Estate/NE9.avif',
+      '/Properties/Nirala Estate/NE10.avif',
+      '/Properties/Nirala Estate/NE11.avif',
+      '/Properties/Nirala Estate/NE12.avif',
+      '/Properties/Nirala Estate/NE13.avif'
+    ],
+    desc: 'Spacious residential development offering modern urban living with expansive green surroundings.',
+    beds: '2, 3 & 4 BHK',
+    area: '995 - 2320 sq.ft',
+    amenities: ['Clubhouse', 'Swimming Pool', 'Yoga Deck', 'Sports Courts', '24/7 Security']
+  },
+  {
+    id: 15,
+    name: 'Shobha Rivana',
+    location: 'Sector 12 Greater Noida West',
+    type: 'Apartment',
+    price: '₹2.10 Cr – ₹4.20 Cr',
+    status: 'Under Construction',
+    image: '/Properties/Shobha Rivana/SR1.avif',
+    gallery: [
+      '/Properties/Shobha Rivana/SR1.avif',
+      '/Properties/Shobha Rivana/SR2.avif',
+      '/Properties/Shobha Rivana/SR3.avif',
+      '/Properties/Shobha Rivana/SR4.webp',
+      '/Properties/Shobha Rivana/SR5.avif',
+      '/Properties/Shobha Rivana/SR6.avif',
+      '/Properties/Shobha Rivana/SR7.avif',
+      '/Properties/Shobha Rivana/SR8.avif'
+    ],
+    desc: 'Luxury waterfront & garden facing apartments built with world-class engineering and fine finishes.',
+    beds: '3 & 4 BHK',
+    area: '1500 - 2400 sq.ft',
+    amenities: ['Waterfront Promenade', 'Clubhouse', 'Infinity Pool', 'Gymnasium', 'Spa']
   }
 ];
 

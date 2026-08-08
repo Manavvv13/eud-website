@@ -8,7 +8,12 @@ const PREVIEW_PROPERTIES = [
   { name: 'VVIP Addresses', location: 'Sector 12 Greater Noida West', type: 'Apartment' },
   { name: 'Arihant One', location: 'Sector 1 Greater Noida West', type: 'Apartment' },
   { name: 'Godrej Majesty', location: 'Sector 12 Greater Noida West', type: 'Apartment' },
-  { name: 'Sublime Spring Elmas', location: 'Sector 12 Noida Extension', type: 'Apartment' }
+  { name: 'Sublime Spring Elmas', location: 'Sector 12 Noida Extension', type: 'Apartment' },
+  { name: 'Ace Hanei', location: 'Sector 12 Greater Noida West', type: 'Apartment' },
+  { name: 'Arihant Abode', location: 'Sector 10 Greater Noida West', type: 'Apartment' },
+  { name: 'Gaur Chrysalis', location: 'Sector 1 Greater Noida West', type: 'Apartment' },
+  { name: 'Nirala Estate', location: 'Techzone 4 Greater Noida West', type: 'Apartment' },
+  { name: 'Shobha Rivana', location: 'Sector 12 Greater Noida West', type: 'Apartment' }
 ];
 
 export default function SearchBar({ onSearch }) {
