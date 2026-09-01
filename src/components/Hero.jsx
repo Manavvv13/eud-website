@@ -14,19 +14,24 @@ export default function Hero() {
 
   return (
     <section id="home" className="hero-section">
-      {/* Background Image Container */}
+      {/* Background Video Container */}
       <div className="hero-bg-wrapper">
         <div className="hero-bg-overlay"></div>
-        <img 
-          src="/Hero Background 2.png" 
-          alt="Modern Architecture Background" 
-          className="hero-bg-image animate-fadeIn"
-        />
+        <video 
+          autoPlay 
+          loop 
+          muted 
+          playsInline 
+          className="hero-bg-image hero-bg-video animate-fadeIn"
+        >
+          <source src="/video banner.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
       </div>
 
       <div className="hero-content-container">
         {/* Categories / Pill Tags */}
-        <div className="hero-category-pills animate-fadeInUp delay-1">
+        <div className="hero-category-pills animate-hero-pills">
           {categories.map((category) => (
             <button
               key={category}
@@ -40,13 +45,13 @@ export default function Hero() {
 
         {/* Hero Title & Description Grid */}
         <div className="hero-main-grid">
-          <div className="hero-left animate-fadeInUp delay-2">
+          <div className="hero-left animate-hero-title">
             <h1 className="hero-title">
               Exceptional Properties<br />for Exceptional Lives,<br />No Reason to Regret
             </h1>
           </div>
           
-          <div className="hero-right animate-fadeInUp delay-2">
+          <div className="hero-right animate-hero-desc">
             <p className="hero-description">
               EUD is a premier real estate company offering a curated portfolio of exceptional properties. We connect you with luxury residential and commercial spaces that inspire modern living.
             </p>
@@ -54,7 +59,7 @@ export default function Hero() {
         </div>
 
         {/* Overlay Search Bar */}
-        <div className="hero-search-wrapper">
+        <div className="hero-search-wrapper animate-hero-search">
           <SearchBar onSearch={handleSearch} />
         </div>
       </div>

@@ -38,12 +38,12 @@ export default function Navbar() {
     <nav className={`navbar-container ${scrolled ? 'scrolled' : ''}`}>
       <div className="navbar-content">
         {/* Brand Logo */}
-        <a href="#home" onClick={(e) => handleNavClick(e, 'home')} className="navbar-logo">
-          <img src="/EUD Logo.png" alt="EUD Logo" className="logo-img" />
+        <a href="#home" onClick={(e) => handleNavClick(e, 'home')} className="navbar-logo animate-nav-logo">
+          <img src={scrolled ? "/EUD Logo.png" : "/EUD Logo White.png"} alt="EUD Logo" className="logo-img" />
         </a>
 
         {/* Center Capsule Menu */}
-        <div className="nav-capsule-wrapper">
+        <div className="nav-capsule-wrapper animate-nav-capsule">
           <div className="nav-capsule">
             <a href="#home" onClick={(e) => handleNavClick(e, 'home')} className="nav-link active">Home</a>
             <a href="#about" onClick={(e) => handleNavClick(e, 'about')} className="nav-link">About Us</a>
@@ -53,7 +53,7 @@ export default function Navbar() {
         </div>
 
         {/* Right Side Buttons */}
-        <div className="navbar-right">
+        <div className="navbar-right animate-nav-contact">
           <button className="btn-contact-nav" onClick={() => navigate('/contact')}>
             Contact Us
           </button>

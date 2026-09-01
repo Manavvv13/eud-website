@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Routes, Route, useLocation, Navigate } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
@@ -11,6 +11,8 @@ import About from './components/About';
 import Footer from './components/Footer';
 import ContactPage from './components/ContactPage';
 import CampaignPage from './components/CampaignPage';
+import AboutPage from './components/AboutPage';
+import Preloader from './components/Preloader';
 
 function ScrollToTopAndRestore() {
   const location = useLocation();
@@ -59,9 +61,13 @@ function HomeRoute() {
 function App() {
   const location = useLocation();
   const isHome = location.pathname === '/';
+  const [loading, setLoading] = useState(true);
 
   return (
     <div className="app-container">
+      {/* Landing Page Preloader with Logo Zoom Out */}
+      {isHome && loading && <Preloader onComplete={() => setLoading(false)} />}
+
       {/* Helper component to reset/restore scroll positions on navigation */}
       <ScrollToTopAndRestore />
 
@@ -72,6 +78,7 @@ function App() {
       <Routes>
         <Route path="/" element={<HomeRoute />} />
         <Route path="/properties" element={<AllProperties />} />
+        <Route path="/about" element={<AboutPage />} />
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/campaign" element={<CampaignPage />} />
         {/* Support backward compatibility redirect from /contest to /campaign */}
