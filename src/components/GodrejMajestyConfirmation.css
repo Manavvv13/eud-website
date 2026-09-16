@@ -1,0 +1,357 @@
+/* ==========================================================================
+   GODREJ MAJESTY — THANK YOU CONFIRMATION PAGE
+   Minimalist White & Light Grey Theme with Gold & Green Accents
+   ========================================================================== */
+
+.godrej-confirm-root {
+  --g-white: #FFFFFF;
+  --g-bg-base: #F9FAFB;
+  --g-card-bg: #FFFFFF;
+  
+  --g-gold-primary: #B89355;
+  --g-gold-bright: #9E7D3B;
+  --g-gold-light: rgba(184, 147, 85, 0.08);
+  --g-gold-border: rgba(184, 147, 85, 0.28);
+  --g-gold-gradient: linear-gradient(135deg, #C5A880 0%, #B89355 50%, #9E7D3B 100%);
+  
+  --g-text-title: #111827;
+  --g-text-body: #4B5563;
+  --g-text-muted: #6B7280;
+  --g-border-subtle: #E5E7EB;
+  --g-border-medium: #D1D5DB;
+  
+  --g-shadow-lg: 0 16px 40px rgba(0, 0, 0, 0.07);
+
+  --g-font-heading: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Inter', 'Montserrat', sans-serif;
+  --g-font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', Roboto, sans-serif;
+
+  min-height: 100vh;
+  background-color: var(--g-bg-base);
+  color: var(--g-text-body);
+  font-family: var(--g-font-body);
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+}
+
+.godrej-confirm-root * {
+  box-sizing: border-box;
+}
+
+/* ==========================================================================
+   HEADER
+   ========================================================================== */
+.godrej-confirm-header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--g-border-subtle);
+}
+
+.godrej-confirm-header-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0.85rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.godrej-confirm-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  text-decoration: none;
+}
+
+.godrej-confirm-logo {
+  height: 36px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+}
+
+.godrej-confirm-brand-divider {
+  width: 1px;
+  height: 24px;
+  background: var(--g-border-medium);
+}
+
+.godrej-confirm-brand-tag {
+  font-family: var(--g-font-heading);
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: var(--g-text-title);
+  letter-spacing: 0.08em;
+}
+
+.godrej-confirm-header-actions {
+  display: flex;
+  align-items: center;
+}
+
+.godrej-confirm-back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.55rem 1.1rem;
+  border-radius: 6px;
+  background: #FFFFFF;
+  border: 1px solid var(--g-border-medium);
+  color: var(--g-text-title);
+  font-family: var(--g-font-body);
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  white-space: nowrap;
+}
+
+.godrej-confirm-back-btn:hover {
+  background: var(--g-gold-light);
+  border-color: var(--g-gold-primary);
+  color: var(--g-gold-bright);
+}
+
+/* ==========================================================================
+   MAIN CONFIRMATION CARD
+   ========================================================================== */
+.godrej-confirm-main {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4.5rem 1.5rem;
+}
+
+.godrej-confirm-container {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.godrej-confirm-card {
+  background: #FFFFFF;
+  border: 1px solid var(--g-border-subtle);
+  border-radius: 24px;
+  padding: 4rem 3rem 3.5rem;
+  box-shadow: var(--g-shadow-lg);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.godrej-confirm-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: var(--g-gold-gradient);
+}
+
+.godrej-confirm-icon-box {
+  width: 86px;
+  height: 86px;
+  border-radius: 50%;
+  background: #EEF8F1;
+  border: 2px solid #C4E9CE;
+  color: #1B8354;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.8rem;
+  animation: godrejTickPulse 2.4s infinite ease-in-out;
+}
+
+@keyframes godrejTickPulse {
+  0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(27, 131, 84, 0.25); }
+  50% { transform: scale(1.05); box-shadow: 0 0 0 14px rgba(27, 131, 84, 0); }
+  100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(27, 131, 84, 0); }
+}
+
+.godrej-confirm-title {
+  font-family: var(--g-font-heading);
+  font-size: clamp(2rem, 3.8vw, 2.6rem);
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: -0.015em;
+  color: var(--g-text-title);
+  line-height: 1.2;
+  margin: 0 0 1rem;
+}
+
+.godrej-confirm-sub {
+  font-size: 1.05rem;
+  line-height: 1.65;
+  color: var(--g-text-body);
+  max-width: 480px;
+  margin: 0 auto 2.4rem;
+}
+
+.godrej-confirm-sub strong {
+  color: var(--g-text-title);
+}
+
+/* ==========================================================================
+   PRIMARY ACTIONS
+   ========================================================================== */
+.godrej-confirm-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.85rem;
+  max-width: 360px;
+  margin: 0 auto 2.4rem;
+}
+
+.godrej-confirm-action-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.65rem;
+  width: 100%;
+  padding: 1.05rem 1.8rem;
+  border-radius: 10px;
+  font-family: var(--g-font-body);
+  font-weight: 700;
+  font-size: 0.94rem;
+  text-decoration: none;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  transition: all 0.25s ease;
+  line-height: 1;
+}
+
+.godrej-confirm-action-btn.whatsapp {
+  background: #1B8354;
+  color: #FFFFFF;
+  border: 1px solid #1B8354;
+  box-shadow: 0 4px 16px rgba(27, 131, 84, 0.25);
+}
+
+.godrej-confirm-action-btn.whatsapp:hover {
+  background: #146c43;
+  border-color: #146c43;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(27, 131, 84, 0.35);
+}
+
+/* Return Link */
+.godrej-confirm-return-box {
+  border-top: 1px solid var(--g-border-subtle);
+  padding-top: 1.8rem;
+}
+
+.godrej-confirm-return-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--g-text-muted);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.godrej-confirm-return-link:hover {
+  color: var(--g-gold-bright);
+}
+
+/* ==========================================================================
+   FOOTER
+   ========================================================================== */
+.godrej-confirm-footer {
+  background: #FFFFFF;
+  border-top: 1px solid var(--g-border-subtle);
+  padding: 1.6rem 2rem;
+  margin-top: auto;
+}
+
+.godrej-confirm-footer-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.godrej-confirm-footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  font-size: 0.78rem;
+  color: var(--g-text-muted);
+}
+
+.godrej-confirm-footer-bottom a {
+  color: var(--g-text-title);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.godrej-confirm-footer-bottom a:hover {
+  color: var(--g-gold-bright);
+}
+
+/* ==========================================================================
+   RESPONSIVE STYLES
+   ========================================================================== */
+@media (max-width: 768px) {
+  .godrej-confirm-header-inner {
+    padding: 0.65rem 1.1rem;
+  }
+  .godrej-confirm-logo {
+    height: 30px;
+  }
+  .godrej-confirm-back-btn {
+    padding: 0.45rem 0.85rem;
+    font-size: 0.72rem;
+  }
+
+  .godrej-confirm-main {
+    padding: 2.8rem 1.1rem;
+  }
+  .godrej-confirm-card {
+    padding: 2.8rem 1.4rem 2.2rem;
+    border-radius: 18px;
+  }
+  .godrej-confirm-icon-box {
+    width: 72px;
+    height: 72px;
+    margin-bottom: 1.4rem;
+  }
+  .godrej-confirm-title {
+    font-size: 1.7rem;
+  }
+  .godrej-confirm-sub {
+    font-size: 0.92rem;
+    margin-bottom: 1.8rem;
+  }
+
+  .godrej-confirm-actions {
+    max-width: 100%;
+    margin-bottom: 2rem;
+  }
+  .godrej-confirm-action-btn {
+    padding: 0.9rem 1.2rem;
+    font-size: 0.86rem;
+  }
+
+  .godrej-confirm-footer {
+    padding: 1.4rem 1rem;
+  }
+  .godrej-confirm-footer-bottom {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.6rem;
+  }
+}

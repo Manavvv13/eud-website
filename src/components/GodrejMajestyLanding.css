@@ -1,0 +1,1905 @@
+/* ==========================================================================
+   GODREJ MAJESTY — SECTOR 12 GREATER NOIDA WEST
+   Theme: High-End Architectural Editorial (Clean White & Grey, Solid Cards,
+          Refined Shadows, Zero Artificial Glows or AI Artifacts)
+   ========================================================================== */
+
+.godrej-landing-root {
+  --g-white: #FFFFFF;
+  --g-bg-page: #FFFFFF;
+  --g-bg-section-alt: #F8F9FA;
+  --g-bg-card-subtle: #FAFAFA;
+  
+  --g-text-title: #111827;
+  --g-text-body: #4B5563;
+  --g-text-muted: #6B7280;
+  
+  --g-border-subtle: #E5E7EB;
+  --g-border-medium: #D1D5DB;
+  --g-border-dark: #111827;
+  
+  --g-accent-brass: #8C6D2B;
+  --g-accent-brass-light: #FBF8F2;
+  --g-accent-brass-border: #E8DECC;
+  
+  --g-btn-dark: #111827;
+  --g-btn-dark-hover: #1F2937;
+
+  --g-shadow-card: 0 4px 14px rgba(0, 0, 0, 0.04);
+  --g-shadow-card-hover: 0 8px 22px rgba(0, 0, 0, 0.07);
+  --g-shadow-hero-form: 0 10px 28px rgba(0, 0, 0, 0.12);
+  --g-shadow-btn: 0 2px 6px rgba(0, 0, 0, 0.08);
+
+  --g-font-heading: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', sans-serif;
+  --g-font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', Roboto, sans-serif;
+
+  min-height: 100vh;
+  background-color: var(--g-bg-page);
+  color: var(--g-text-body);
+  font-family: var(--g-font-body);
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+.godrej-landing-root * {
+  box-sizing: border-box;
+}
+
+.godrej-container {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  width: 100%;
+}
+
+/* ==========================================================================
+   HEADER / NAVBAR (SOLID EDITORIAL WHITE)
+   ========================================================================== */
+.godrej-header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 900;
+  background: #FFFFFF;
+  border-bottom: 1px solid var(--g-border-subtle);
+  transition: all 0.25s ease;
+}
+
+.godrej-header.scrolled {
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+}
+
+.godrej-header-inner {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0.85rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.godrej-brand {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  text-decoration: none;
+}
+
+.godrej-brand-img {
+  height: 38px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+}
+
+.godrej-desktop-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+}
+
+.godrej-nav-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.godrej-nav-link {
+  color: var(--g-text-title);
+  text-decoration: none;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  transition: color 0.15s ease;
+}
+
+.godrej-nav-link:hover {
+  color: var(--g-accent-brass);
+}
+
+.godrej-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  flex-shrink: 0;
+}
+
+.godrej-call-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.62rem 1.15rem;
+  border-radius: 6px;
+  background: #FFFFFF;
+  border: 1px solid var(--g-border-medium);
+  color: var(--g-text-title);
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  line-height: 1;
+}
+
+.godrej-call-btn:hover {
+  background: var(--g-bg-section-alt);
+  border-color: var(--g-text-title);
+}
+
+.godrej-btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.68rem 1.4rem;
+  border-radius: 6px;
+  background: var(--g-btn-dark);
+  color: #FFFFFF;
+  font-family: var(--g-font-body);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  border: 1px solid var(--g-btn-dark);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  line-height: 1;
+  box-shadow: var(--g-shadow-btn);
+}
+
+.godrej-btn-primary:hover {
+  background: var(--g-btn-dark-hover);
+  transform: translateY(-1px);
+}
+
+.godrej-mobile-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--g-text-title);
+  cursor: pointer;
+  padding: 0.3rem;
+}
+
+.godrej-mobile-menu {
+  display: none;
+}
+
+/* ==========================================================================
+   HERO BANNER (NATURAL BANNER, NO GRADIENT, SOLID FORM ON LEFT)
+   ========================================================================== */
+.godrej-fullscreen-hero {
+  position: relative;
+  width: 100%;
+  background: #F3F4F6;
+  overflow: hidden;
+}
+
+.godrej-banner-frame {
+  position: relative;
+  width: 100%;
+  display: block;
+}
+
+.godrej-fullscreen-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
+.godrej-hero-desktop {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.godrej-hero-mobile {
+  display: none !important;
+  width: 100%;
+  height: auto;
+}
+
+/* Form positioned strictly on the LEFT SIDE of the hero */
+.godrej-hero-floating-card-wrap {
+  position: absolute;
+  top: 50%;
+  left: 4.5%;
+  transform: translateY(-50%);
+  z-index: 10;
+  width: 350px;
+  max-width: 90%;
+}
+
+.godrej-floating-form-card,
+.godrej-mobile-form-wrapper {
+  background: #FFFFFF;
+  border: 1px solid var(--g-border-medium);
+  border-radius: 12px;
+  padding: 1.5rem 1.35rem 1.35rem;
+  box-shadow: var(--g-shadow-hero-form);
+  position: relative;
+}
+
+.godrej-form-header {
+  text-align: center;
+  margin-bottom: 0.9rem;
+  padding-bottom: 0.7rem;
+  border-bottom: 1px solid var(--g-border-subtle);
+}
+
+.godrej-form-heading {
+  font-family: var(--g-font-heading);
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--g-text-title);
+  text-transform: uppercase;
+  letter-spacing: -0.01em;
+  margin: 0;
+}
+
+/* Form Inputs */
+.godrej-lead-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.godrej-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  text-align: left;
+}
+
+.godrej-form-group label {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--g-text-title);
+}
+
+.godrej-form-group input,
+.godrej-form-group select,
+.godrej-form-group textarea {
+  width: 100%;
+  padding: 0.62rem 0.8rem;
+  border-radius: 6px;
+  background: #FFFFFF;
+  border: 1px solid var(--g-border-medium);
+  color: var(--g-text-title);
+  font-family: var(--g-font-body);
+  font-size: 0.82rem;
+  outline: none;
+  transition: border-color 0.15s ease;
+}
+
+.godrej-form-group textarea {
+  resize: vertical;
+  min-height: 52px;
+  line-height: 1.4;
+}
+
+.godrej-form-group select {
+  max-width: 100%;
+  box-sizing: border-box;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2212%22%20height%3D%2212%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%23111827%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpolyline%20points%3D%226%209%2012%2015%2018%209%22%3E%3C%2Fpolyline%3E%3C%2Fsvg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  background-size: 12px;
+  padding-right: 2rem;
+  cursor: pointer;
+}
+
+.godrej-form-group select option {
+  max-width: 100%;
+  padding: 0.5rem;
+  font-size: 0.82rem;
+  background: #FFFFFF;
+  color: #111827;
+}
+
+.godrej-form-group input:focus,
+.godrej-form-group select:focus,
+.godrej-form-group textarea:focus {
+  border-color: var(--g-text-title);
+}
+
+.godrej-input-prefix {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.godrej-prefix-tag {
+  position: absolute;
+  left: 0.75rem;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--g-text-title);
+  pointer-events: none;
+}
+
+.godrej-input-prefix input {
+  padding-left: 2.6rem;
+}
+
+.godrej-form-submit-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 100%;
+  padding: 0.85rem 1.2rem;
+  border-radius: 6px;
+  background: var(--g-btn-dark);
+  color: #FFFFFF;
+  font-family: var(--g-font-body);
+  font-size: 0.82rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border: none;
+  cursor: pointer;
+  transition: background 0.15s ease;
+  margin-top: 0.3rem;
+  box-shadow: var(--g-shadow-btn);
+}
+
+.godrej-form-submit-btn:hover:not(:disabled) {
+  background: var(--g-btn-dark-hover);
+}
+
+.godrej-form-submit-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+/* Mobile Dedicated Form Section */
+.godrej-mobile-form-section {
+  display: none;
+}
+
+/* ==========================================================================
+   STATS STRIP
+   ========================================================================== */
+.godrej-stats-strip {
+  background: #FFFFFF;
+  border-top: 1px solid var(--g-border-subtle);
+  border-bottom: 1px solid var(--g-border-subtle);
+  padding: 1.8rem 0;
+}
+
+.godrej-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  text-align: center;
+}
+
+.godrej-stat-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  position: relative;
+}
+
+.godrej-stat-item:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  right: -0.75rem;
+  top: 15%;
+  height: 70%;
+  width: 1px;
+  background: var(--g-border-subtle);
+}
+
+.godrej-stat-value {
+  font-family: var(--g-font-heading);
+  font-size: 1.65rem;
+  font-weight: 800;
+  color: var(--g-text-title);
+  line-height: 1.1;
+}
+
+.godrej-stat-label {
+  font-size: 0.74rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--g-text-muted);
+}
+
+/* ==========================================================================
+   COMMON SECTIONS
+   ========================================================================== */
+.godrej-section {
+  padding: 5rem 0;
+  position: relative;
+}
+
+.godrej-section:nth-of-type(even) {
+  background: var(--g-bg-section-alt);
+}
+
+.godrej-section-head {
+  text-align: center;
+  max-width: 780px;
+  margin: 0 auto 3.5rem;
+}
+
+.godrej-section-kicker {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--g-accent-brass);
+  margin-bottom: 0.45rem;
+}
+
+.godrej-section-title {
+  font-family: var(--g-font-heading);
+  font-size: clamp(1.9rem, 3.2vw, 2.5rem);
+  font-weight: 800;
+  color: var(--g-text-title);
+  text-transform: uppercase;
+  letter-spacing: -0.015em;
+  line-height: 1.15;
+  margin: 0 0 1rem;
+}
+
+.godrej-head-underline {
+  width: 50px;
+  height: 2px;
+  background: var(--g-text-title);
+  margin: 0 auto 1.2rem;
+}
+
+.godrej-section-lead {
+  font-size: 0.98rem;
+  line-height: 1.7;
+  color: var(--g-text-body);
+  margin: 0;
+}
+
+.godrej-btn-gold {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.55rem;
+  padding: 0.85rem 1.6rem;
+  border-radius: 6px;
+  background: var(--g-btn-dark);
+  color: #FFFFFF;
+  font-family: var(--g-font-body);
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  transition: background 0.15s ease;
+  box-shadow: var(--g-shadow-btn);
+}
+
+.godrej-btn-gold:hover {
+  background: var(--g-btn-dark-hover);
+}
+
+/* ==========================================================================
+   SECTION 1: OVERVIEW CARDS (SOLID WITH LITTLE DROP SHADOW)
+   ========================================================================== */
+.godrej-overview-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+.godrej-overview-card {
+  background: #FFFFFF;
+  border: 1px solid var(--g-border-subtle);
+  border-radius: 12px;
+  padding: 2.2rem 1.6rem;
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--g-shadow-card);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.godrej-overview-card:hover {
+  border-color: var(--g-border-medium);
+  transform: translateY(-2px);
+  box-shadow: var(--g-shadow-card-hover);
+}
+
+.godrej-card-icon-wrap {
+  width: 48px;
+  height: 48px;
+  border-radius: 8px;
+  background: var(--g-bg-section-alt);
+  border: 1px solid var(--g-border-subtle);
+  color: var(--g-text-title);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.4rem;
+}
+
+.godrej-card-title {
+  font-family: var(--g-font-heading);
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: var(--g-text-title);
+  margin: 0 0 0.75rem;
+}
+
+.godrej-card-desc {
+  font-size: 0.84rem;
+  line-height: 1.6;
+  color: var(--g-text-body);
+  margin: 0;
+}
+
+/* ==========================================================================
+   SECTION 2: HIGHLIGHTS (SOLID CARDS WITH LITTLE DROP SHADOW)
+   ========================================================================== */
+.godrej-highlights-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.2rem;
+  max-width: 1060px;
+  margin: 0 auto;
+}
+
+.godrej-highlight-box {
+  background: #FFFFFF;
+  border: 1px solid var(--g-border-subtle);
+  border-radius: 10px;
+  padding: 1.4rem 1.2rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  box-shadow: var(--g-shadow-card);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.godrej-highlight-box:hover {
+  border-color: var(--g-border-medium);
+  transform: translateY(-2px);
+  box-shadow: var(--g-shadow-card-hover);
+}
+
+.godrej-hl-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 8px;
+  background: var(--g-bg-section-alt);
+  border: 1px solid var(--g-border-subtle);
+  color: var(--g-text-title);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.godrej-hl-info h4 {
+  font-family: var(--g-font-heading);
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: var(--g-text-title);
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  margin: 0 0 0.3rem;
+}
+
+.godrej-hl-info p {
+  font-size: 0.82rem;
+  line-height: 1.5;
+  color: var(--g-text-body);
+  margin: 0;
+}
+
+/* ==========================================================================
+   SECTION 3: 30:70 PAYMENT PLAN BANNER (SOLID WITH LITTLE DROP SHADOW)
+   ========================================================================== */
+.godrej-payment-card-banner {
+  background: #FFFFFF;
+  border: 1px solid var(--g-border-medium);
+  border-radius: 14px;
+  padding: 3.5rem 3rem;
+  box-shadow: var(--g-shadow-card);
+  position: relative;
+  text-align: center;
+}
+
+.godrej-payment-content {
+  max-width: 780px;
+  margin: 0 auto;
+}
+
+.godrej-payment-title {
+  font-family: var(--g-font-heading);
+  font-size: clamp(2.2rem, 4vw, 3rem);
+  font-weight: 800;
+  color: var(--g-text-title);
+  text-transform: uppercase;
+  letter-spacing: -0.015em;
+  margin: 0.4rem 0 0.8rem;
+}
+
+.godrej-payment-sub {
+  font-size: 0.96rem;
+  line-height: 1.65;
+  color: var(--g-text-body);
+  margin: 0 auto 2.5rem;
+}
+
+.godrej-payment-breakdown-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 2.5rem;
+}
+
+.godrej-pay-step {
+  background: var(--g-bg-section-alt);
+  border: 1px solid var(--g-border-subtle);
+  border-radius: 10px;
+  padding: 1.6rem 2rem;
+  min-width: 220px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.03);
+}
+
+.godrej-pay-percent {
+  font-family: var(--g-font-heading);
+  font-size: 2.4rem;
+  font-weight: 800;
+  color: var(--g-text-title);
+  line-height: 1;
+}
+
+.godrej-pay-desc strong {
+  display: block;
+  font-size: 0.9rem;
+  color: var(--g-text-title);
+  margin-bottom: 0.2rem;
+}
+
+.godrej-pay-desc span {
+  font-size: 0.76rem;
+  color: var(--g-text-muted);
+}
+
+.godrej-pay-plus {
+  font-family: var(--g-font-heading);
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: var(--g-border-medium);
+}
+
+.godrej-payment-cta-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.godrej-payment-note {
+  font-size: 0.72rem;
+  color: var(--g-text-muted);
+}
+
+/* ==========================================================================
+   SECTION 4: PRICING CARDS (SOLID WITH LITTLE DROP SHADOW)
+   ========================================================================== */
+.godrej-pricing-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 1.8rem;
+}
+
+.godrej-pricing-card {
+  background: #FFFFFF;
+  border: 1px solid var(--g-border-subtle);
+  border-radius: 12px;
+  padding: 2.4rem 1.8rem 1.8rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--g-shadow-card);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.godrej-pricing-card:hover {
+  border-color: var(--g-border-medium);
+  transform: translateY(-2px);
+  box-shadow: var(--g-shadow-card-hover);
+}
+
+.godrej-pricing-card.featured {
+  border: 1.5px solid var(--g-text-title);
+}
+
+.godrej-pricing-badge {
+  position: absolute;
+  top: 1.2rem;
+  right: 1.2rem;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  padding: 0.3rem 0.7rem;
+  border-radius: 4px;
+  background: var(--g-bg-section-alt);
+  color: var(--g-text-title);
+  border: 1px solid var(--g-border-subtle);
+}
+
+.godrej-pricing-badge.gold {
+  background: var(--g-btn-dark);
+  color: #FFFFFF;
+  border-color: var(--g-btn-dark);
+}
+
+.godrej-unit-type {
+  font-family: var(--g-font-heading);
+  font-size: 1.55rem;
+  font-weight: 800;
+  color: var(--g-text-title);
+  margin: 0 0 1.2rem;
+}
+
+.godrej-unit-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding-bottom: 1.2rem;
+  border-bottom: 1px solid var(--g-border-subtle);
+  margin-bottom: 1.4rem;
+}
+
+.godrej-unit-meta-item {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.84rem;
+  color: var(--g-text-body);
+}
+
+.godrej-unit-meta-item svg {
+  color: var(--g-text-title);
+}
+
+.godrej-unit-meta-item strong {
+  color: var(--g-text-title);
+}
+
+.godrej-price-display {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.4rem;
+}
+
+.godrej-price-cur {
+  font-family: var(--g-font-heading);
+  font-size: 1.85rem;
+  font-weight: 800;
+  color: var(--g-text-title);
+  line-height: 1.1;
+}
+
+.godrej-price-onwards {
+  font-size: 0.74rem;
+  color: var(--g-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.godrej-unit-features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.godrej-unit-features li {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.8rem;
+  color: var(--g-text-body);
+}
+
+.godrej-unit-features li svg {
+  color: var(--g-text-title);
+  flex-shrink: 0;
+}
+
+.godrej-card-cta-group {
+  margin-top: auto;
+}
+
+.godrej-btn-gold-card {
+  width: 100%;
+  padding: 0.85rem 1.2rem;
+  border-radius: 6px;
+  background: #FFFFFF;
+  border: 1px solid var(--g-border-medium);
+  color: var(--g-text-title);
+  font-family: var(--g-font-body);
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+}
+
+.godrej-btn-gold-card:hover {
+  background: var(--g-bg-section-alt);
+  border-color: var(--g-text-title);
+}
+
+.godrej-btn-gold-card.primary {
+  background: var(--g-btn-dark);
+  color: #FFFFFF;
+  border: 1px solid var(--g-btn-dark);
+  box-shadow: var(--g-shadow-btn);
+}
+
+.godrej-btn-gold-card.primary:hover {
+  background: var(--g-btn-dark-hover);
+}
+
+.godrej-pricing-disclaimer {
+  text-align: center;
+  font-size: 0.76rem;
+  color: var(--g-text-muted);
+}
+
+/* ==========================================================================
+   SECTION 5: FLOOR PLANS CARDS (SOLID WITH LITTLE DROP SHADOW - AS REQUESTED)
+   ========================================================================== */
+.godrej-floorplan-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.godrej-plan-card {
+  background: #FFFFFF;
+  border: 1px solid var(--g-border-subtle);
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--g-shadow-card);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.godrej-plan-card:hover {
+  border-color: var(--g-border-medium);
+  box-shadow: var(--g-shadow-card-hover);
+  transform: translateY(-2px);
+}
+
+.godrej-plan-on-request-box {
+  width: 100%;
+  height: 220px;
+  background: #F9FAFB;
+  border-bottom: 1px solid var(--g-border-subtle);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 1.5rem;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.godrej-plan-card:hover .godrej-plan-on-request-box {
+  background: #F3F4F6;
+}
+
+.godrej-on-request-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.godrej-on-request-tag {
+  font-size: 0.66rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--g-text-muted);
+  background: #FFFFFF;
+  border: 1px solid var(--g-border-subtle);
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+}
+
+.godrej-on-request-title {
+  font-family: var(--g-font-heading);
+  font-size: 1.45rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--g-text-title);
+  margin: 0.3rem 0 0.1rem;
+}
+
+.godrej-on-request-sub {
+  font-size: 0.76rem;
+  color: var(--g-text-muted);
+  margin: 0;
+}
+
+.godrej-plan-footer {
+  padding: 1.3rem 1.4rem;
+  background: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.godrej-plan-footer strong {
+  display: block;
+  font-size: 0.88rem;
+  color: var(--g-text-title);
+}
+
+.godrej-plan-footer span {
+  display: block;
+  font-size: 0.72rem;
+  color: var(--g-text-muted);
+}
+
+.godrej-unlock-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.58rem 1rem;
+  border-radius: 6px;
+  background: #FFFFFF;
+  border: 1px solid var(--g-border-medium);
+  color: var(--g-text-title);
+  font-size: 0.74rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  white-space: nowrap;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+  transition: all 0.15s ease;
+}
+
+.godrej-unlock-btn:hover {
+  background: var(--g-btn-dark);
+  color: #FFFFFF;
+  border-color: var(--g-btn-dark);
+}
+
+/* ==========================================================================
+   SECTION 6: AMENITIES (SOLID TILES WITH LITTLE DROP SHADOW)
+   ========================================================================== */
+.godrej-amenities-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.2rem;
+}
+
+.godrej-amenity-tile {
+  background: #FFFFFF;
+  border: 1px solid var(--g-border-subtle);
+  border-radius: 10px;
+  padding: 1.8rem 1.4rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: var(--g-shadow-card);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.godrej-amenity-tile:hover {
+  border-color: var(--g-border-medium);
+  transform: translateY(-2px);
+  box-shadow: var(--g-shadow-card-hover);
+}
+
+.godrej-am-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 8px;
+  background: var(--g-bg-section-alt);
+  border: 1px solid var(--g-border-subtle);
+  color: var(--g-text-title);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.1rem;
+}
+
+.godrej-amenity-tile h4 {
+  font-family: var(--g-font-heading);
+  font-size: 0.96rem;
+  font-weight: 800;
+  color: var(--g-text-title);
+  margin: 0 0 0.45rem;
+}
+
+.godrej-amenity-tile p {
+  font-size: 0.78rem;
+  line-height: 1.45;
+  color: var(--g-text-body);
+  margin: 0;
+}
+
+/* ==========================================================================
+   SECTION 7: LOCATION & WHY CHOOSE (SOLID CARDS WITH LITTLE DROP SHADOW)
+   ========================================================================== */
+.godrej-location-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.godrej-location-map-card {
+  background: #FFFFFF;
+  border: 1px solid var(--g-border-subtle);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: var(--g-shadow-card);
+  display: flex;
+  flex-direction: column;
+}
+
+.godrej-map-img-wrap {
+  position: relative;
+  width: 100%;
+  height: 360px;
+  background: #F3F4F6;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.godrej-location-map-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.3s ease;
+}
+
+.godrej-map-img-wrap:hover .godrej-location-map-img {
+  transform: scale(1.03);
+}
+
+.godrej-map-overlay-badge {
+  position: absolute;
+  top: 0.9rem;
+  right: 0.9rem;
+  background: rgba(17, 24, 39, 0.88);
+  color: #FFFFFF;
+  font-size: 0.68rem;
+  font-weight: 700;
+  padding: 0.35rem 0.75rem;
+  border-radius: 20px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.godrej-map-card-footer {
+  padding: 1.1rem 1.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  background: #FFFFFF;
+  border-top: 1px solid var(--g-border-subtle);
+}
+
+.godrej-map-card-footer strong {
+  display: block;
+  font-size: 0.88rem;
+  color: var(--g-text-title);
+}
+
+.godrej-map-card-footer span {
+  display: block;
+  font-size: 0.72rem;
+  color: var(--g-text-muted);
+}
+
+.godrej-location-list-card,
+.godrej-why-choose-card {
+  background: #FFFFFF;
+  border: 1px solid var(--g-border-subtle);
+  border-radius: 12px;
+  padding: 2.2rem 2rem;
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--g-shadow-card);
+}
+
+.godrej-loc-card-title {
+  font-family: var(--g-font-heading);
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--g-text-title);
+  margin: 0 0 1.6rem;
+  padding-bottom: 0.8rem;
+  border-bottom: 1px solid var(--g-border-subtle);
+}
+
+.godrej-loc-items {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.godrej-loc-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.godrej-loc-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 6px;
+  background: var(--g-bg-section-alt);
+  border: 1px solid var(--g-border-subtle);
+  color: var(--g-text-title);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.godrej-loc-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.godrej-loc-name {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--g-text-title);
+}
+
+.godrej-loc-dist {
+  font-size: 0.76rem;
+  color: var(--g-text-muted);
+}
+
+.godrej-loc-cta {
+  margin-top: auto;
+}
+
+.godrej-why-points {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.godrej-why-point {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.85rem;
+}
+
+.godrej-why-check {
+  color: var(--g-text-title);
+  margin-top: 0.15rem;
+  flex-shrink: 0;
+}
+
+.godrej-why-point strong {
+  display: block;
+  font-size: 0.92rem;
+  color: var(--g-text-title);
+  margin-bottom: 0.2rem;
+}
+
+.godrej-why-point p {
+  font-size: 0.82rem;
+  line-height: 1.5;
+  color: var(--g-text-body);
+  margin: 0;
+}
+
+/* ==========================================================================
+   SECTION 8: GALLERY PLACEHOLDERS (SOLID WITH LITTLE DROP SHADOW)
+   ========================================================================== */
+.godrej-gallery-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-bottom: 2.5rem;
+}
+
+.godrej-gal-tab {
+  padding: 0.6rem 1.25rem;
+  border-radius: 6px;
+  background: #FFFFFF;
+  border: 1px solid var(--g-border-medium);
+  color: var(--g-text-title);
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.03);
+}
+
+.godrej-gal-tab.active,
+.godrej-gal-tab:hover {
+  background: var(--g-btn-dark);
+  color: #FFFFFF;
+  border-color: var(--g-btn-dark);
+}
+
+.godrej-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.2rem;
+}
+
+.godrej-gallery-card {
+  background: #FFFFFF;
+  border: 1px solid var(--g-border-subtle);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: var(--g-shadow-card);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  cursor: pointer;
+}
+
+.godrej-gallery-card:hover {
+  border-color: var(--g-border-medium);
+  transform: translateY(-2px);
+  box-shadow: var(--g-shadow-card-hover);
+}
+
+.godrej-gallery-img-wrap {
+  position: relative;
+  width: 100%;
+  height: 220px;
+  background: #F3F4F6;
+  overflow: hidden;
+}
+
+.godrej-gallery-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.35s ease;
+}
+
+.godrej-gallery-card:hover .godrej-gallery-img {
+  transform: scale(1.05);
+}
+
+.godrej-gallery-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 1.6rem 1.1rem 1rem;
+  background: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.88) 100%);
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.godrej-gal-tag {
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  background: rgba(255, 255, 255, 0.22);
+  backdrop-filter: blur(4px);
+  padding: 0.18rem 0.5rem;
+  border-radius: 3px;
+  align-self: flex-start;
+}
+
+.godrej-gal-card-title {
+  font-family: var(--g-font-heading);
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  margin: 0;
+  line-height: 1.35;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* ==========================================================================
+   SECTION 9: BOTTOM LEAD GENERATION (SOLID WITH LITTLE DROP SHADOW)
+   ========================================================================== */
+.godrej-bottom-leadgen-section {
+  padding: 5rem 0;
+  background: var(--g-bg-section-alt);
+}
+
+.godrej-leadgen-card {
+  background: #FFFFFF;
+  border: 1px solid var(--g-border-medium);
+  border-radius: 14px;
+  padding: 3.5rem 3rem;
+  box-shadow: var(--g-shadow-card);
+  position: relative;
+}
+
+.godrej-leadgen-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.godrej-leadgen-title {
+  font-family: var(--g-font-heading);
+  font-size: clamp(2rem, 3.5vw, 2.6rem);
+  font-weight: 800;
+  color: var(--g-text-title);
+  text-transform: uppercase;
+  letter-spacing: -0.015em;
+  margin: 0.4rem 0 0.8rem;
+}
+
+.godrej-leadgen-sub {
+  font-size: 0.96rem;
+  line-height: 1.6;
+  color: var(--g-text-body);
+  margin: 0 0 2rem;
+}
+
+.godrej-leadgen-perks {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  margin-bottom: 2.2rem;
+}
+
+.godrej-perk-item {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  font-size: 0.88rem;
+  color: var(--g-text-title);
+}
+
+.godrej-perk-item svg {
+  color: var(--g-text-title);
+  flex-shrink: 0;
+}
+
+.godrej-leadgen-contact-box {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.godrej-contact-label {
+  font-size: 0.74rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--g-text-muted);
+}
+
+.godrej-leadgen-phone {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--g-text-title);
+  text-decoration: none;
+}
+
+.godrej-leadgen-phone:hover {
+  text-decoration: underline;
+}
+
+/* ==========================================================================
+   FOOTER (CLEAN MINIMAL DISCLAIMER & COPYRIGHT)
+   ========================================================================== */
+.godrej-footer {
+  background: #FFFFFF;
+  border-top: 1px solid var(--g-border-subtle);
+  padding: 3.5rem 1.5rem 3.5rem;
+}
+
+.godrej-disclaimer-text {
+  font-size: 0.76rem;
+  color: #6B7280;
+  line-height: 1.75;
+  text-align: justify;
+  max-width: 1120px;
+  margin: 0 auto 2.2rem;
+}
+
+.godrej-disclaimer-text strong {
+  color: #374151;
+  font-weight: 700;
+}
+
+.godrej-footer-bottom {
+  border-top: 1px solid var(--g-border-subtle);
+  padding-top: 1.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+  font-size: 0.8rem;
+  color: #6B7280;
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+.godrej-footer-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.godrej-footer-links a {
+  color: #111827;
+  font-weight: 700;
+  font-size: 0.74rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+.godrej-footer-links a:hover {
+  color: var(--g-accent-brass);
+}
+
+/* ==========================================================================
+   STICKY MOBILE BOTTOM BAR
+   ========================================================================== */
+.godrej-mobile-bottom-bar {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #FFFFFF;
+  border-top: 1px solid var(--g-border-medium);
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.06);
+  padding: 0.55rem 0.8rem;
+  z-index: 800;
+  gap: 0.5rem;
+}
+
+.godrej-mobile-bar-btn {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  padding: 0.65rem 0.5rem;
+  border-radius: 6px;
+  font-family: var(--g-font-body);
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-decoration: none;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.godrej-mobile-bar-btn.call {
+  background: #FFFFFF;
+  color: var(--g-text-title);
+  border: 1px solid var(--g-border-medium);
+}
+
+.godrej-mobile-bar-btn.whatsapp {
+  background: #1B8354;
+  color: #FFFFFF;
+}
+
+.godrej-mobile-bar-btn.enquire {
+  background: var(--g-btn-dark);
+  color: #FFFFFF;
+}
+
+/* ==========================================================================
+   MODAL POPUP (SOLID CLEAN)
+   ========================================================================== */
+.godrej-modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.55);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+}
+
+.godrej-modal-card {
+  background: #FFFFFF;
+  border: 1px solid var(--g-border-medium);
+  border-radius: 12px;
+  width: 100%;
+  max-width: 460px;
+  padding: 2rem 1.8rem;
+  position: relative;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.15);
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.godrej-modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: var(--g-bg-section-alt);
+  border: 1px solid var(--g-border-subtle);
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--g-text-title);
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.godrej-modal-close:hover {
+  background: var(--g-border-medium);
+}
+
+.godrej-modal-header {
+  text-align: center;
+  margin-bottom: 1.2rem;
+  padding-bottom: 0.6rem;
+  border-bottom: 1px solid var(--g-border-subtle);
+}
+
+.godrej-modal-title {
+  font-family: var(--g-font-heading);
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: var(--g-text-title);
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.godrej-lightbox-card {
+  background: #FFFFFF;
+  border-radius: 12px;
+  max-width: 90vw;
+  max-height: 90vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.4);
+  padding: 0.5rem;
+}
+
+.godrej-lightbox-img {
+  max-width: 86vw;
+  max-height: 84vh;
+  object-fit: contain;
+  border-radius: 8px;
+  display: block;
+}
+
+/* ==========================================================================
+   TABLET RESPONSIVENESS (max-width: 1024px)
+   ========================================================================== */
+@media (max-width: 1024px) {
+  .godrej-desktop-nav {
+    display: none;
+  }
+  .godrej-mobile-toggle {
+    display: flex;
+  }
+  .godrej-mobile-menu {
+    display: none;
+    flex-direction: column;
+    gap: 0.8rem;
+    padding: 1.2rem 1.5rem;
+    background: #FFFFFF;
+    border-bottom: 1px solid var(--g-border-medium);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+  }
+  .godrej-mobile-menu.open {
+    display: flex;
+  }
+
+  .godrej-hero-floating-card-wrap {
+    width: 330px;
+    left: 3.5%;
+  }
+  .godrej-floating-form-card {
+    padding: 1.3rem 1.1rem;
+  }
+  .godrej-form-heading {
+    font-size: 1.08rem;
+  }
+
+  .godrej-overview-cards-grid,
+  .godrej-amenities-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .godrej-gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .godrej-pricing-cards-grid,
+  .godrej-floorplan-cards-grid {
+    grid-template-columns: 1fr;
+    max-width: 580px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .godrej-location-layout,
+  .godrej-leadgen-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ==========================================================================
+   MOBILE RESPONSIVENESS (max-width: 768px)
+   ========================================================================== */
+@media (max-width: 768px) {
+  .godrej-header-inner {
+    padding: 0.4rem 1rem;
+    min-height: auto;
+  }
+  .godrej-brand-img {
+    height: 26px;
+  }
+  .godrej-header-actions {
+    gap: 0.45rem;
+  }
+  .godrej-call-btn span {
+    display: none;
+  }
+  .godrej-call-btn {
+    padding: 0.35rem 0.55rem;
+    border-radius: 4px;
+  }
+  .godrej-btn-primary {
+    padding: 0.38rem 0.75rem;
+    font-size: 0.7rem;
+    border-radius: 4px;
+  }
+  .godrej-mobile-toggle {
+    padding: 0.2rem;
+  }
+
+  .godrej-fullscreen-hero,
+  .godrej-banner-frame {
+    margin: 0;
+    padding: 0;
+    line-height: 0;
+  }
+
+  /* 9:16 mobile portrait image displayed */
+  .godrej-hero-desktop {
+    display: none !important;
+  }
+  .godrej-hero-mobile {
+    display: block !important;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Hide floating card overlay in mobile hero */
+  .godrej-hero-floating-card-wrap {
+    display: none;
+  }
+
+  /* Render form cleanly below hero on mobile */
+  .godrej-mobile-form-section {
+    display: block;
+    padding: 2rem 0;
+    background: var(--g-bg-section-alt);
+  }
+
+  /* Stats 2-2 grid */
+  .godrej-stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.2rem;
+  }
+  .godrej-stat-item:not(:last-child)::after {
+    display: none;
+  }
+  .godrej-stat-value {
+    font-size: 1.35rem;
+  }
+
+  /* Sections padding */
+  .godrej-section {
+    padding: 3.5rem 0;
+  }
+
+  /* Grid 2-2-2-2 on mobile for highlights & amenities */
+  .godrej-highlights-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+  }
+  .godrej-highlight-box {
+    padding: 1rem 0.75rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.6rem;
+  }
+  .godrej-hl-icon {
+    width: 36px;
+    height: 36px;
+  }
+  .godrej-hl-info h4 {
+    font-size: 0.84rem;
+  }
+  .godrej-hl-info p {
+    font-size: 0.72rem;
+    line-height: 1.35;
+  }
+
+  /* Amenities 2-2-2-2 grid */
+  .godrej-amenities-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+  }
+  .godrej-amenity-tile {
+    padding: 1.2rem 0.8rem;
+  }
+  .godrej-am-icon {
+    width: 44px;
+    height: 44px;
+    margin-bottom: 0.8rem;
+  }
+  .godrej-amenity-tile h4 {
+    font-size: 0.86rem;
+  }
+  .godrej-amenity-tile p {
+    font-size: 0.7rem;
+  }
+
+  /* Overview cards */
+  .godrej-overview-cards-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  /* 30:70 Payment Banner */
+  .godrej-payment-card-banner {
+    padding: 2.2rem 1.2rem;
+  }
+  .godrej-payment-breakdown-row {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .godrej-pay-plus {
+    display: none;
+  }
+  .godrej-pay-step {
+    width: 100%;
+    min-width: unset;
+    padding: 1.2rem 1rem;
+  }
+
+  /* Gallery 2-2 grid */
+  .godrej-gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+  }
+  .godrej-gallery-img-wrap {
+    height: 150px;
+  }
+  .godrej-gal-card-title {
+    font-size: 0.75rem;
+  }
+  .godrej-map-img-wrap {
+    height: 240px;
+  }
+
+  /* Lead generation bottom section */
+  .godrej-leadgen-card {
+    padding: 2.2rem 1.2rem;
+  }
+
+  /* Footer */
+  .godrej-footer {
+    padding: 2.5rem 1.2rem 6.5rem; /* extra bottom padding for mobile sticky bar */
+  }
+  .godrej-disclaimer-text {
+    text-align: left;
+    margin-bottom: 1.5rem;
+    font-size: 0.74rem;
+  }
+  .godrej-footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.1rem;
+  }
+  .godrej-footer-links {
+    gap: 1.5rem;
+  }
+
+  /* Mobile bottom sticky bar */
+  .godrej-mobile-bottom-bar {
+    display: flex;
+  }
+}
