@@ -963,9 +963,9 @@ export default function Eldeco7PeaksLanding() {
           <div style={{ textAlign: 'center', marginTop: '3rem' }}>
             <button 
               className="eldeco-btn-primary"
-              onClick={() => openEnquiryModal('Schedule Free Site Visit with Chauffeur Facility')}
+              onClick={() => openEnquiryModal('Schedule Site Visit')}
             >
-              <Calendar size={16} /> Schedule Site Visit with Cab Facility
+              <Calendar size={16} /> Schedule Site Visit
             </button>
           </div>
         </div>
