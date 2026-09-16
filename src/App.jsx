@@ -15,6 +15,7 @@ import AboutPage from './components/AboutPage';
 import Preloader from './components/Preloader';
 
 import Eldeco7PeaksLanding from './components/Eldeco7PeaksLanding';
+import Eldeco7PeaksConfirmation from './components/Eldeco7PeaksConfirmation';
 
 function ScrollToTopAndRestore() {
   const location = useLocation();
@@ -63,7 +64,7 @@ function HomeRoute() {
 function App() {
   const location = useLocation();
   const isHome = location.pathname === '/';
-  const isStandalone = location.pathname === '/eldeco-7-peaks' || location.pathname === '/godrej-majesty';
+  const isStandalone = location.pathname === '/eldeco-7-peaks' || location.pathname === '/godrej-majesty' || location.pathname === '/eldeco-7-peaks-confirmation';
   const [loading, setLoading] = useState(true);
 
   return (
@@ -87,6 +88,7 @@ function App() {
         {/* Performance Marketing Standalone Landing Pages */}
         <Route path="/eldeco-7-peaks" element={<Eldeco7PeaksLanding />} />
         <Route path="/godrej-majesty" element={<Eldeco7PeaksLanding />} />
+        <Route path="/eldeco-7-peaks-confirmation" element={<Eldeco7PeaksConfirmation />} />
         {/* Support backward compatibility redirect from /contest to /campaign */}
         <Route path="/contest" element={<Navigate to="/campaign" replace />} />
         {/* Fallback route to home */}

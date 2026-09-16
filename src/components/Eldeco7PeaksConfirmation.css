@@ -1,0 +1,541 @@
+﻿/* ==========================================================================
+   ELDECO 7 PEAKS — THANK YOU CONFIRMATION PAGE
+   Quiet Luxury Editorial Aesthetics (Warm Limestone, Sand, Sandstone & Gold)
+   ========================================================================== */
+
+.eldeco-confirm-root {
+  --e-cream: #FAF8F5;
+  --e-white: #FFFFFF;
+  --e-sand: #ECE6DC;
+  --e-sand-light: #F4EFEB;
+  --e-dark: #181816;
+  --e-accent-gold: #C2994B;
+  --e-accent-gold-light: rgba(194, 153, 75, 0.08);
+  --e-accent-gold-border: rgba(194, 153, 75, 0.28);
+  --e-text-title: #181816;
+  --e-text-body: #4A4742;
+  --e-text-muted: #7A756D;
+  --e-border-subtle: rgba(24, 24, 22, 0.08);
+  --e-border-medium: rgba(24, 24, 22, 0.14);
+  --e-shadow-sm: 0 4px 14px rgba(24, 24, 22, 0.05);
+  --e-shadow-md: 0 10px 30px rgba(24, 24, 22, 0.06);
+  --e-shadow-lg: 0 20px 45px rgba(24, 24, 22, 0.08);
+  --e-font-heading: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Inter', 'Montserrat', sans-serif;
+  --e-font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', Roboto, sans-serif;
+
+  min-height: 100vh;
+  background-color: var(--e-cream);
+  color: var(--e-text-body);
+  font-family: var(--e-font-body);
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+}
+
+.eldeco-confirm-root * {
+  box-sizing: border-box;
+}
+
+/* ==========================================================================
+   HEADER
+   ========================================================================== */
+.eldeco-confirm-header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  background: rgba(250, 248, 245, 0.94);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--e-border-subtle);
+}
+
+.eldeco-confirm-header-inner {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0.75rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.eldeco-confirm-brand {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.eldeco-confirm-logo {
+  height: 38px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+}
+
+.eldeco-confirm-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.eldeco-confirm-call-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1.15rem;
+  border-radius: 6px;
+  background: var(--e-white);
+  border: 1px solid var(--e-border-medium);
+  color: var(--e-text-title);
+  font-family: var(--e-font-body);
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  white-space: nowrap;
+}
+
+.eldeco-confirm-call-btn:hover {
+  background: var(--e-accent-gold-light);
+  border-color: var(--e-accent-gold);
+  color: var(--e-accent-gold);
+}
+
+.eldeco-confirm-back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.6rem 1.15rem;
+  border-radius: 6px;
+  background: var(--e-dark);
+  color: #FFFFFF;
+  font-family: var(--e-font-body);
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  white-space: nowrap;
+}
+
+.eldeco-confirm-back-btn:hover {
+  background: var(--e-accent-gold);
+  color: #FFFFFF;
+}
+
+/* ==========================================================================
+   MAIN CONFIRMATION CARD
+   ========================================================================== */
+.eldeco-confirm-main {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3.5rem 1.5rem 4.5rem;
+}
+
+.eldeco-confirm-container {
+  width: 100%;
+  max-width: 820px;
+  margin: 0 auto;
+}
+
+.eldeco-confirm-card {
+  background: #FFFFFF;
+  border: 1px solid var(--e-border-medium);
+  border-radius: 20px;
+  padding: 3.6rem 3.2rem 3rem;
+  box-shadow: var(--e-shadow-lg);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.eldeco-confirm-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, var(--e-dark) 0%, var(--e-accent-gold) 50%, var(--e-dark) 100%);
+}
+
+.eldeco-confirm-icon-box {
+  width: 76px;
+  height: 76px;
+  border-radius: 50%;
+  background: var(--e-accent-gold-light);
+  border: 1.5px solid var(--e-accent-gold-border);
+  color: var(--e-accent-gold);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.4rem;
+  animation: eldecoPulse 2s infinite ease-in-out;
+}
+
+@keyframes eldecoPulse {
+  0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(194, 153, 75, 0.25); }
+  50% { transform: scale(1.04); box-shadow: 0 0 0 10px rgba(194, 153, 75, 0); }
+  100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(194, 153, 75, 0); }
+}
+
+.eldeco-confirm-badge {
+  display: inline-block;
+  font-family: var(--e-font-body);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--e-accent-gold);
+  background: var(--e-accent-gold-light);
+  border: 1px solid var(--e-accent-gold-border);
+  padding: 0.35rem 1.1rem;
+  border-radius: 9999px;
+  margin-bottom: 1.1rem;
+}
+
+.eldeco-confirm-title {
+  font-family: var(--e-font-heading);
+  font-size: clamp(2rem, 4vw, 2.6rem);
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: -0.015em;
+  color: var(--e-text-title);
+  line-height: 1.15;
+  margin: 0 0 1rem;
+}
+
+.eldeco-confirm-sub {
+  font-size: 1.02rem;
+  line-height: 1.65;
+  color: var(--e-text-body);
+  max-width: 640px;
+  margin: 0 auto 2.5rem;
+}
+
+.eldeco-confirm-sub strong {
+  color: var(--e-text-title);
+  font-weight: 700;
+}
+
+/* ==========================================================================
+   WHAT HAPPENS NEXT (3 CARDS)
+   ========================================================================== */
+.eldeco-confirm-steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.2rem;
+  margin-bottom: 2.8rem;
+  text-align: left;
+}
+
+.eldeco-confirm-step {
+  background: var(--e-sand-light);
+  border: 1px solid var(--e-border-subtle);
+  border-radius: 12px;
+  padding: 1.4rem 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  transition: all 0.25s ease;
+}
+
+.eldeco-confirm-step:hover {
+  border-color: var(--e-accent-gold);
+  background: #FFFFFF;
+  box-shadow: var(--e-shadow-sm);
+}
+
+.eldeco-step-num {
+  font-family: var(--e-font-heading);
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: var(--e-accent-gold);
+  line-height: 1;
+}
+
+.eldeco-step-content h4 {
+  font-family: var(--e-font-heading);
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: var(--e-text-title);
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  margin: 0 0 0.4rem;
+}
+
+.eldeco-step-content p {
+  font-size: 0.8rem;
+  line-height: 1.45;
+  color: var(--e-text-muted);
+  margin: 0;
+}
+
+/* ==========================================================================
+   PRIMARY ACTIONS
+   ========================================================================== */
+.eldeco-confirm-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  max-width: 480px;
+  margin: 0 auto 2.8rem;
+}
+
+.eldeco-confirm-action-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.65rem;
+  padding: 0.95rem 1.6rem;
+  border-radius: 8px;
+  font-family: var(--e-font-body);
+  font-weight: 600;
+  font-size: 0.84rem;
+  text-decoration: none;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  transition: all 0.25s ease;
+  line-height: 1;
+}
+
+.eldeco-confirm-action-btn.primary {
+  background: var(--e-dark);
+  color: #FFFFFF;
+  border: 1px solid var(--e-dark);
+  box-shadow: 0 4px 14px rgba(24, 24, 22, 0.15);
+}
+
+.eldeco-confirm-action-btn.primary:hover {
+  background: var(--e-accent-gold);
+  border-color: var(--e-accent-gold);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(194, 153, 75, 0.25);
+}
+
+.eldeco-confirm-action-btn.whatsapp {
+  background: #1B8354;
+  color: #FFFFFF;
+  border: 1px solid #1B8354;
+}
+
+.eldeco-confirm-action-btn.whatsapp:hover {
+  background: #146c43;
+  border-color: #146c43;
+  transform: translateY(-2px);
+}
+
+.eldeco-confirm-action-btn.outline {
+  background: #FFFFFF;
+  color: var(--e-text-title);
+  border: 1.5px solid var(--e-border-medium);
+}
+
+.eldeco-confirm-action-btn.outline:hover {
+  border-color: var(--e-accent-gold);
+  color: var(--e-accent-gold);
+  background: var(--e-accent-gold-light);
+  transform: translateY(-2px);
+}
+
+/* ==========================================================================
+   PROJECT SNAPSHOT
+   ========================================================================== */
+.eldeco-confirm-project-snapshot {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  padding: 1.4rem 1rem;
+  background: var(--e-cream);
+  border: 1px solid var(--e-border-medium);
+  border-radius: 12px;
+  margin-bottom: 2.2rem;
+  text-align: left;
+}
+
+.eldeco-snapshot-item {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  color: var(--e-text-title);
+}
+
+.eldeco-snapshot-item svg {
+  color: var(--e-accent-gold);
+  flex-shrink: 0;
+}
+
+.eldeco-snapshot-label {
+  display: block;
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--e-text-muted);
+}
+
+.eldeco-snapshot-item strong {
+  display: block;
+  font-size: 0.84rem;
+  font-weight: 700;
+  color: var(--e-text-title);
+}
+
+/* Return Link */
+.eldeco-confirm-return-box {
+  border-top: 1px solid var(--e-border-subtle);
+  padding-top: 1.6rem;
+}
+
+.eldeco-confirm-return-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--e-text-muted);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.eldeco-confirm-return-link:hover {
+  color: var(--e-accent-gold);
+}
+
+/* ==========================================================================
+   FOOTER
+   ========================================================================== */
+.eldeco-confirm-footer {
+  background: #FFFFFF;
+  border-top: 1px solid var(--e-border-subtle);
+  padding: 2.2rem 2rem;
+  margin-top: auto;
+}
+
+.eldeco-confirm-footer-inner {
+  max-width: 1240px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.eldeco-confirm-disclaimer {
+  font-size: 0.75rem;
+  line-height: 1.65;
+  color: var(--e-text-muted);
+  max-width: 780px;
+  margin: 0 auto 1.2rem;
+}
+
+.eldeco-confirm-footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  font-size: 0.78rem;
+  color: var(--e-text-muted);
+  border-top: 1px solid var(--e-border-subtle);
+  padding-top: 1.2rem;
+}
+
+.eldeco-confirm-footer-bottom a {
+  color: var(--e-text-title);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.eldeco-confirm-footer-bottom a:hover {
+  color: var(--e-accent-gold);
+}
+
+/* ==========================================================================
+   RESPONSIVE STYLES
+   ========================================================================== */
+@media (max-width: 768px) {
+  .eldeco-confirm-header-inner {
+    padding: 0.6rem 1.1rem;
+  }
+  .eldeco-confirm-logo {
+    height: 32px;
+  }
+  .eldeco-confirm-call-btn span {
+    display: none;
+  }
+  .eldeco-confirm-call-btn {
+    padding: 0.5rem 0.75rem;
+  }
+  .eldeco-confirm-back-btn {
+    padding: 0.5rem 0.85rem;
+    font-size: 0.72rem;
+  }
+
+  .eldeco-confirm-main {
+    padding: 2rem 1rem 3rem;
+  }
+  .eldeco-confirm-card {
+    padding: 2.4rem 1.2rem 2rem;
+    border-radius: 16px;
+  }
+  .eldeco-confirm-icon-box {
+    width: 62px;
+    height: 62px;
+  }
+  .eldeco-confirm-icon-box svg {
+    width: 34px;
+    height: 34px;
+  }
+  .eldeco-confirm-title {
+    font-size: 1.65rem;
+  }
+  .eldeco-confirm-sub {
+    font-size: 0.88rem;
+    margin-bottom: 1.8rem;
+  }
+
+  .eldeco-confirm-steps {
+    grid-template-columns: 1fr;
+    gap: 0.85rem;
+    margin-bottom: 2rem;
+  }
+  .eldeco-confirm-step {
+    padding: 1.1rem 1rem;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 0.8rem;
+  }
+  .eldeco-step-num {
+    font-size: 1.2rem;
+  }
+
+  .eldeco-confirm-actions {
+    max-width: 100%;
+    margin-bottom: 2rem;
+  }
+  .eldeco-confirm-action-btn {
+    padding: 0.85rem 1rem;
+    font-size: 0.78rem;
+    white-space: normal;
+    text-align: center;
+    line-height: 1.35;
+  }
+
+  .eldeco-confirm-project-snapshot {
+    grid-template-columns: 1fr;
+    gap: 0.85rem;
+    padding: 1.1rem 1rem;
+    margin-bottom: 1.8rem;
+  }
+
+  .eldeco-confirm-footer {
+    padding: 1.8rem 1rem;
+  }
+  .eldeco-confirm-footer-bottom {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.6rem;
+  }
+}

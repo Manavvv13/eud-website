@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { 
   Phone, 
   Send, 
@@ -24,6 +25,8 @@ import {
 import './Eldeco7PeaksLanding.css';
 
 export default function Eldeco7PeaksLanding() {
+  const navigate = useNavigate();
+
   // Navigation & Scroll states
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -135,6 +138,13 @@ export default function Eldeco7PeaksLanding() {
     } finally {
       setIsSubmitting(false);
       setIsSuccess(true);
+      navigate('/eldeco-7-peaks-confirmation', {
+        state: {
+          name: formData.name.trim(),
+          phone: formData.phone.trim(),
+          email: formData.email.trim()
+        }
+      });
     }
   };
 
