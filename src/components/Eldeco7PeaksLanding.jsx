@@ -233,15 +233,21 @@ export default function Eldeco7PeaksLanding() {
           ========================================================================== */}
       <section className="eldeco-fullscreen-hero" id="hero">
         <div className="eldeco-banner-frame">
-          <picture style={{ width: '100%', height: '100%' }}>
-            <source media="(max-width: 768px)" srcSet="/Properties/Eldeco 7 Peaks/7PEAKS_16x9.png" />
-            <img 
-              src="/Properties/Eldeco 7 Peaks/7PEAKS_16x9.png" 
-              alt="Eldeco 7 Peaks Residences - Full Screen Campaign Banner"
-              className="eldeco-fullscreen-img"
-              fetchPriority="high"
-            />
-          </picture>
+          {/* Desktop & Tablet Hero Image (16:9 Landscape) */}
+          <img 
+            src="/Properties/Eldeco 7 Peaks/7PEAKS_16x9.webp" 
+            alt="Eldeco 7 Peaks Residences - Full Screen Campaign Banner"
+            className="eldeco-fullscreen-img eldeco-hero-desktop"
+            fetchPriority="high"
+          />
+
+          {/* Mobile Hero Image (9:16 Portrait) */}
+          <img 
+            src="/Properties/Eldeco 7 Peaks/7PEAKS_9x16.webp" 
+            alt="Eldeco 7 Peaks Residences - Mobile Portrait Campaign Banner"
+            className="eldeco-fullscreen-img eldeco-hero-mobile"
+            fetchPriority="high"
+          />
 
           {/* Floating High-Converting Enquiry Card */}
           <div className="eldeco-hero-floating-card">
@@ -1053,10 +1059,6 @@ export default function Eldeco7PeaksLanding() {
               </div>
             </div>
 
-            <div style={{ display: 'inline-flex', alignItems: 'center', gap: '0.6rem', color: 'var(--e-text-title)', fontWeight: 600, fontSize: '0.86rem', letterSpacing: '0.04em' }}>
-              <ShieldCheck size={18} color="var(--e-accent-gold)" />
-              <span>Exclusively Marketed & Facilitated by EUD Group Advisory Team</span>
-            </div>
           </div>
         </div>
       </section>
@@ -1089,7 +1091,7 @@ export default function Eldeco7PeaksLanding() {
               </div>
             </div>
 
-            <div style={{ background: '#FFFFFF', border: '1px solid var(--e-border-medium)', borderRadius: '16px', padding: '2.5rem', boxShadow: 'var(--e-shadow-lg)' }}>
+            <div className="eldeco-leadgen-form-box">
               <h3 className="eldeco-form-title" style={{ textAlign: 'left', marginBottom: '0.35rem' }}>
                 Request Instant Callback
               </h3>
