@@ -32,14 +32,19 @@ export default function BrochureModal({ property, isOpen, onClose }) {
 
   const downloadBrochure = (prop, user) => {
     const brochureMap = {
-      'CRC Joyous': '/brochures/CRC Joyous Brochure.pdf',
-      'CRC Maesta': '/brochures/CRC Maesta Brochure.pdf',
-      'Irish Platinum': '/brochures/Irish Platinum Brochure.pdf',
-      'Elite X': '/brochures/Elite X Brochure.pdf',
-      'VVIP Addresses': '/brochures/VVIP Addresses Brochure.pdf',
-      'Arihant One': '/brochures/Arihant One Brochure.pdf',
-      'Godrej Majesty': '/brochures/Godrej Majesty Brochure.pdf',
-      'Sublime Spring Elmas': '/brochures/Sublime Spring Elmas Brochure.pdf',
+      'CRC Joyous': '/brochures/crc joyous brochure.pdf',
+      'CRC Maesta': '/brochures/crc maesta brochure.pdf',
+      'Irish Platinum': '/brochures/irish platinum brochure.pdf',
+      'Arihant One': '/brochures/arihant one brochure.pdf',
+      'VVIP Addresses': '/brochures/vvip addresses brochure.pdf',
+      'Ashtech Presidential Towers': '/brochures/ashtech presidential towers brochure.pdf',
+      'Experion Saatori': '/brochures/experion saatori brochure.pdf',
+      'Iris Broadway': '/brochures/iris broadway brochure.pdf',
+      'KB Westwalk': '/brochures/kb westwalk brochure.pdf',
+      'Max Estate 105': '/brochures/max estate 105 brochure.pdf',
+      'Max Estates 128': '/brochures/max estates 128 brochure.pdf',
+      'Nirala Diadem': '/brochures/nirala diadem brochure.pdf',
+      'Nirala Gateway': '/brochures/nirala gateway brochure.pdf',
     };
 
     const pdfUrl = prop.brochure || brochureMap[prop.name];

@@ -12,7 +12,7 @@ const ALL_PROPERTIES = [
     type: 'Apartment',
     price: '₹1.45 Cr – ₹3.15 Cr',
     status: 'Under Construction',
-    brochure: '/brochures/CRC Joyous Brochure.pdf',
+    brochure: '/brochures/crc joyous brochure.pdf',
     image: '/Properties/CRC Joyous/CRCJ 1.avif',
     gallery: [
       '/Properties/CRC Joyous/CRCJ 1.avif',
@@ -35,7 +35,7 @@ const ALL_PROPERTIES = [
     type: 'Apartment',
     price: '₹2.25 Cr – ₹3.80 Cr',
     status: 'Under Construction',
-    brochure: '/brochures/CRC Maesta Brochure.pdf',
+    brochure: '/brochures/crc maesta brochure.pdf',
     image: '/Properties/CRC Maesta/CRCM 1.avif',
     gallery: [
       '/Properties/CRC Maesta/CRCM 1.avif',
@@ -56,7 +56,7 @@ const ALL_PROPERTIES = [
     type: 'Apartment',
     price: '₹1.60 Cr – ₹3.20 Cr',
     status: 'Under Construction',
-    brochure: '/brochures/Irish Platinum Brochure.pdf',
+    brochure: '/brochures/irish platinum brochure.pdf',
     image: '/Properties/Irish Platinum/IP 1.avif',
     gallery: [
       '/Properties/Irish Platinum/IP 1.avif',
@@ -100,6 +100,7 @@ const ALL_PROPERTIES = [
     type: 'Apartment',
     price: '₹1.10 Cr – ₹2.50 Cr',
     status: 'Ready to Move',
+    brochure: '/brochures/vvip addresses brochure.pdf',
     image: '/Properties/VVIP Addresses/VVIP 1.avif',
     gallery: [
       '/Properties/VVIP Addresses/VVIP 1.avif',
@@ -120,6 +121,7 @@ const ALL_PROPERTIES = [
     type: 'Apartment',
     price: '₹1.40 Cr – ₹2.40 Cr',
     status: 'Under Construction',
+    brochure: '/brochures/arihant one brochure.pdf',
     image: '/Properties/Arihant One/AO1.avif',
     gallery: [
       '/Properties/Arihant One/AO1.avif',
@@ -291,6 +293,142 @@ const ALL_PROPERTIES = [
     beds: '3 & 4 BHK',
     area: '1500 - 2400 sq.ft',
     amenities: ['Waterfront Promenade', 'Clubhouse', 'Infinity Pool', 'Gymnasium', 'Spa']
+  },
+  {
+    id: 16,
+    name: 'Ashtech Presidential Towers',
+    location: 'Sector 12 Greater Noida West',
+    type: 'Apartment',
+    price: '₹2.60 Cr – ₹5.20 Cr',
+    status: 'Under Construction',
+    brochure: '/brochures/ashtech presidential towers brochure.pdf',
+    image: '/placeholder-property.svg',
+    gallery: [
+      '/placeholder-property.svg'
+    ],
+    desc: 'High-end presidential residences offering ultra-spacious layouts, sky lounge, panoramic city views, and curated luxury lifestyle amenities.',
+    beds: '3 & 4 BHK',
+    area: '2100 - 3600 sq.ft',
+    amenities: ['Clubhouse', 'Swimming Pool', 'Gymnasium', 'Sky Lounge', 'Jogging Track', 'Tennis Court']
+  },
+  {
+    id: 17,
+    name: 'Experion Saatori',
+    location: 'Sector 151 Noida Expressway',
+    type: 'Apartment',
+    price: '₹3.10 Cr – ₹5.80 Cr',
+    status: 'Under Construction',
+    brochure: '/brochures/experion saatori brochure.pdf',
+    image: '/placeholder-property.svg',
+    gallery: [
+      '/placeholder-property.svg'
+    ],
+    desc: 'Curated Japanese-inspired biophilic residences offering serene zen landscapes, bespoke concierge, and low-density luxury living.',
+    beds: '3 & 4 BHK',
+    area: '2200 - 3400 sq.ft',
+    amenities: ['Infinity Pool', 'Zen Garden', 'Clubhouse', 'Gymnasium', 'Spa', 'Concierge Service']
+  },
+  {
+    id: 18,
+    name: 'Iris Broadway',
+    location: 'Sector Ecotech 12 Greater Noida West',
+    type: 'Commercial',
+    price: '₹25 Lac – ₹2.50 Cr',
+    status: 'Under Construction',
+    brochure: '/brochures/iris broadway brochure.pdf',
+    image: '/placeholder-property.svg',
+    gallery: [
+      '/placeholder-property.svg'
+    ],
+    desc: 'A grand destination commercial development combining high-street retail, entertainment multiplex, multi-cuisine food courts, and office spaces.',
+    beds: 'Retail & Office Suites',
+    area: '150 - 1500 sq.ft',
+    amenities: ['Central Atrium', 'Food Court', 'High-speed Elevators', 'Ample Parking', '24/7 Security', 'Power Backup']
+  },
+  {
+    id: 19,
+    name: 'KB Westwalk',
+    location: 'Sector Ecotech 12 Greater Noida West',
+    type: 'Commercial',
+    price: '₹32 Lac – ₹1.80 Cr',
+    status: 'Under Construction',
+    brochure: '/brochures/kb westwalk brochure.pdf',
+    image: '/placeholder-property.svg',
+    gallery: [
+      '/placeholder-property.svg'
+    ],
+    desc: 'Premier high-street retail and entertainment destination with open walkways, bustling dining avenues, and modern studio spaces.',
+    beds: 'Retail, Food Court & Studios',
+    area: '150 - 1200 sq.ft',
+    amenities: ['Multiplex', 'Food Court', 'High-speed Elevators', 'Multi-level Parking', '24/7 Security', 'Power Backup']
+  },
+  {
+    id: 20,
+    name: 'Max Estate 105',
+    location: 'Sector 105 Noida',
+    type: 'Apartment',
+    price: '₹8.50 Cr – ₹16.50 Cr',
+    status: 'Under Construction',
+    brochure: '/brochures/max estate 105 brochure.pdf',
+    image: '/placeholder-property.svg',
+    gallery: [
+      '/placeholder-property.svg'
+    ],
+    desc: 'Exclusive ultra-luxury wellness residences designed by world-renowned architects, featuring forest landscapes and 5-star concierge.',
+    beds: '4 & 5 BHK',
+    area: '3400 - 5800 sq.ft',
+    amenities: ['Clubhouse', 'Swimming Pool', 'Elevated Jogging Track', 'Spa & Wellness', 'Concierge Service', 'Sports Arena']
+  },
+  {
+    id: 21,
+    name: 'Max Estates 128',
+    location: 'Sector 128 Noida Expressway',
+    type: 'Apartment',
+    price: '₹11.00 Cr – ₹28.00 Cr',
+    status: 'Under Construction',
+    brochure: '/brochures/max estates 128 brochure.pdf',
+    image: '/placeholder-property.svg',
+    gallery: [
+      '/placeholder-property.svg'
+    ],
+    desc: 'Ultra-exclusive golf course residences offering private plunge pools, uninterrupted views, grand arrival pavilions, and bespoke living.',
+    beds: '4 & 5 BHK',
+    area: '4400 - 6800 sq.ft',
+    amenities: ['Golf Views', 'Private Plunge Pools', 'Grand Clubhouse', 'Concierge Service', 'Infinity Pool', 'Sports Courts']
+  },
+  {
+    id: 22,
+    name: 'Nirala Diadem',
+    location: 'Sector 10 Greater Noida West',
+    type: 'Commercial',
+    price: '₹35 Lac – ₹1.10 Cr',
+    status: 'Under Construction',
+    brochure: '/brochures/nirala diadem brochure.pdf',
+    image: '/placeholder-property.svg',
+    gallery: [
+      '/placeholder-property.svg'
+    ],
+    desc: 'Modern commercial hub featuring high-visibility retail outlets, multiplex screen zones, and state-of-the-art office spaces.',
+    beds: 'Studio & Retail Suites',
+    area: '280 - 565 sq.ft',
+    amenities: ['High-street Retail', 'Multiplex', 'Food Court', 'High-speed Elevators', '24/7 Security', 'Power Backup']
+  },
+  {
+    id: 23,
+    name: 'Nirala Gateway',
+    location: 'Sector 10 Greater Noida West',
+    type: 'Commercial',
+    price: '₹45 Lac – ₹1.95 Cr',
+    status: 'Under Construction',
+    brochure: '/brochures/nirala gateway brochure.pdf',
+    image: '/placeholder-property.svg',
+    gallery: [
+      '/placeholder-property.svg'
+    ],
+    desc: 'Contemporary business and commercial plaza positioned in prime Greater Noida West, offering high footfall retail and smart offices.',
+    beds: 'Retail & Business Suites',
+    area: '300 - 1250 sq.ft',
+    amenities: ['Retail Plaza', 'Corporate Suites', 'Food Court', 'Parking Bay', '24/7 Security', 'Power Backup']
   }
 ];
 

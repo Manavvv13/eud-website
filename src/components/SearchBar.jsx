@@ -13,7 +13,15 @@ const PREVIEW_PROPERTIES = [
   { name: 'Arihant Abode', location: 'Sector 10 Greater Noida West', type: 'Apartment' },
   { name: 'Gaur Chrysalis', location: 'Sector 1 Greater Noida West', type: 'Apartment' },
   { name: 'Nirala Estate', location: 'Techzone 4 Greater Noida West', type: 'Apartment' },
-  { name: 'Shobha Rivana', location: 'Sector 12 Greater Noida West', type: 'Apartment' }
+  { name: 'Shobha Rivana', location: 'Sector 12 Greater Noida West', type: 'Apartment' },
+  { name: 'Ashtech Presidential Towers', location: 'Sector 12 Greater Noida West', type: 'Apartment' },
+  { name: 'Experion Saatori', location: 'Sector 151 Noida Expressway', type: 'Apartment' },
+  { name: 'Iris Broadway', location: 'Sector Ecotech 12 Greater Noida West', type: 'Commercial' },
+  { name: 'KB Westwalk', location: 'Sector Ecotech 12 Greater Noida West', type: 'Commercial' },
+  { name: 'Max Estate 105', location: 'Sector 105 Noida', type: 'Apartment' },
+  { name: 'Max Estates 128', location: 'Sector 128 Noida Expressway', type: 'Apartment' },
+  { name: 'Nirala Diadem', location: 'Sector 10 Greater Noida West', type: 'Commercial' },
+  { name: 'Nirala Gateway', location: 'Sector 10 Greater Noida West', type: 'Commercial' }
 ];
 
 export default function SearchBar({ onSearch }) {
