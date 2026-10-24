@@ -355,9 +355,13 @@ const ALL_PROPERTIES = [
     price: '₹25 Lac – ₹2.50 Cr',
     status: 'Under Construction',
     brochure: '/brochures/iris broadway brochure.pdf',
-    image: '/placeholder-property.svg',
+    image: '/Properties/Iris Broadway/IB 1.webp',
     gallery: [
-      '/placeholder-property.svg'
+      '/Properties/Iris Broadway/IB 1.webp',
+      '/Properties/Iris Broadway/IB 2.webp',
+      '/Properties/Iris Broadway/IB 3.webp',
+      '/Properties/Iris Broadway/IB 4.webp',
+      '/Properties/Iris Broadway/IB 5.webp'
     ],
     desc: 'A grand destination commercial development combining high-street retail, entertainment multiplex, multi-cuisine food courts, and office spaces.',
     beds: 'Retail & Office Suites',
@@ -455,9 +459,15 @@ const ALL_PROPERTIES = [
     price: '₹45 Lac – ₹1.95 Cr',
     status: 'Under Construction',
     brochure: '/brochures/nirala gateway brochure.pdf',
-    image: '/placeholder-property.svg',
+    image: '/Properties/Nirala Gateway/NG 1.jpg',
     gallery: [
-      '/placeholder-property.svg'
+      '/Properties/Nirala Gateway/NG 1.jpg',
+      '/Properties/Nirala Gateway/NG 2.jpg',
+      '/Properties/Nirala Gateway/NG 3.jpg',
+      '/Properties/Nirala Gateway/NG 4.jpg',
+      '/Properties/Nirala Gateway/NG 5.jpg',
+      '/Properties/Nirala Gateway/NG 6.jpg',
+      '/Properties/Nirala Gateway/NG 7.jpg'
     ],
     desc: 'Contemporary business and commercial plaza positioned in prime Greater Noida West, offering high footfall retail and smart offices.',
     beds: 'Retail & Business Suites',
