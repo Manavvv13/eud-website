@@ -1646,27 +1646,92 @@ button {
     grid-column: span 2;
   }
   .portfolio-custom-section {
-    padding: 80px 24px 60px;
+    padding: 60px 24px 50px;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
   }
   .portfolio-header {
     flex-direction: column;
     align-items: flex-start;
-    gap: 20px;
+    gap: 16px;
+    margin-bottom: 28px;
   }
   .portfolio-main-title {
-    font-size: 30px;
+    font-size: 32px;
   }
   .portfolio-grid-container {
     grid-template-columns: 1fr;
-    gap: 20px;
+    gap: 28px;
+    width: 100%;
+    max-width: 100%;
   }
   .portfolio-col-main {
     grid-column: span 1;
-    height: 350px;
+    width: 100%;
+    max-width: 100%;
+    height: 320px;
   }
-  .portfolio-col-text, .portfolio-col-pricing {
-    height: auto;
-    padding: 30px 20px;
+  .main-card-image-wrapper {
+    border-radius: 20px;
+  }
+  .gallery-picker-capsule {
+    bottom: 12px;
+    right: 12px;
+    padding: 4px;
+    gap: 4px;
+  }
+  .gallery-picker-dot {
+    width: 32px;
+    height: 32px;
+  }
+  .portfolio-col-text-wrapper {
+    width: 100%;
+    max-width: 100%;
+    align-items: center;
+  }
+  .portfolio-col-text {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    aspect-ratio: 1 / 1 !important;
+    border-radius: 20px !important;
+    box-sizing: border-box !important;
+    overflow: hidden !important;
+  }
+  .portfolio-col-text img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: contain !important;
+    display: block !important;
+    border-radius: 20px !important;
+  }
+  .portfolio-footer-desc-bottom {
+    width: 100% !important;
+    max-width: 100% !important;
+    text-align: center !important;
+  }
+  .portfolio-col-pricing-wrapper {
+    width: 100%;
+    max-width: 100%;
+  }
+  .portfolio-col-pricing {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    border-radius: 20px !important;
+    padding: 18px !important;
+    box-sizing: border-box !important;
+  }
+  .pricing-card-image-wrapper {
+    height: 220px !important;
+    border-radius: 16px !important;
+    width: 100% !important;
+  }
+  .portfolio-col-pricing-wrapper .portfolio-nav-arrows {
+    justify-content: center !important;
+    margin-top: 14px !important;
   }
   .portfolio-footer-row {
     flex-direction: column;
@@ -1778,7 +1843,46 @@ button {
     gap: 16px;
     text-align: center;
   }
+  .portfolio-custom-section {
+    padding: 44px 20px 40px !important;
+  }
+  .portfolio-main-title {
+    font-size: 28px !important;
+  }
+  .portfolio-col-main {
+    height: 280px !important;
+  }
   @media (max-width: 480px) {
+    .portfolio-custom-section {
+      padding: 36px 16px 32px !important;
+    }
+    .portfolio-main-title {
+      font-size: 25px !important;
+      line-height: 1.25 !important;
+    }
+    .portfolio-col-main {
+      height: 230px !important;
+    }
+    .gallery-picker-capsule {
+      bottom: 8px !important;
+      right: 8px !important;
+      padding: 3px !important;
+      gap: 3px !important;
+    }
+    .gallery-picker-dot {
+      width: 26px !important;
+      height: 26px !important;
+    }
+    .portfolio-header-right {
+      gap: 12px !important;
+    }
+    .video-pill-thumbnail {
+      width: 90px !important;
+      height: 50px !important;
+    }
+    .pricing-card-image-wrapper {
+      height: 190px !important;
+    }
     .hero-title {
       font-size: 28px;
       line-height: 1.22;
