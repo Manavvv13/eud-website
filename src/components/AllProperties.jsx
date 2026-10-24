@@ -79,6 +79,7 @@ const ALL_PROPERTIES = [
     type: 'Apartment',
     price: '₹1.95 Cr – ₹3.80 Cr',
     status: 'Under Construction',
+    brochure: '/brochures/Elite X brochure.pdf',
     image: '/Properties/Elite X/EX 1.avif',
     gallery: [
       '/Properties/Elite X/EX 1.avif',
@@ -143,6 +144,7 @@ const ALL_PROPERTIES = [
     type: 'Apartment',
     price: '₹2.40 Cr – ₹4.90 Cr',
     status: 'Under Construction',
+    brochure: '/brochures/Godrej Majesty brochure.pdf',
     image: '/Properties/Godrej Majesty/GM1.avif',
     gallery: [
       '/Properties/Godrej Majesty/GM1.avif',
@@ -163,6 +165,7 @@ const ALL_PROPERTIES = [
     type: 'Apartment',
     price: '₹1.35 Cr – ₹2.60 Cr',
     status: 'Under Construction',
+    brochure: '/brochures/Spring Elmas brochure.pdf',
     image: '/Properties/Sublime Spring Elmas/SSE1.avif',
     gallery: [
       '/Properties/Sublime Spring Elmas/SSE1.avif',
@@ -186,6 +189,7 @@ const ALL_PROPERTIES = [
     type: 'Apartment',
     price: '₹1.65 Cr – ₹3.20 Cr',
     status: 'Under Construction',
+    brochure: '/brochures/Ace Hanei brochure.pdf',
     image: '/Properties/Ace Hanei/AH1.avif',
     gallery: [
       '/Properties/Ace Hanei/AH1.avif',
@@ -207,6 +211,7 @@ const ALL_PROPERTIES = [
     type: 'Apartment',
     price: '₹1.15 Cr – ₹2.10 Cr',
     status: 'Under Construction',
+    brochure: '/brochures/Arihant abode brochure.pdf',
     image: '/Properties/Arihant Abode/AA1.avif',
     gallery: [
       '/Properties/Arihant Abode/AA1.avif',
@@ -250,6 +255,7 @@ const ALL_PROPERTIES = [
     type: 'Apartment',
     price: '₹1.25 Cr – ₹2.85 Cr',
     status: 'Under Construction',
+    brochure: '/brochures/Nirala Estate Brochure.pdf',
     image: '/Properties/Nirala Estate/NE1.avif',
     gallery: [
       '/Properties/Nirala Estate/NE1.avif',
@@ -278,6 +284,7 @@ const ALL_PROPERTIES = [
     type: 'Apartment',
     price: '₹2.10 Cr – ₹4.20 Cr',
     status: 'Under Construction',
+    brochure: '/brochures/Sobha Rivana brochure.pdf',
     image: '/Properties/Shobha Rivana/SR1.avif',
     gallery: [
       '/Properties/Shobha Rivana/SR1.avif',
@@ -302,9 +309,14 @@ const ALL_PROPERTIES = [
     price: '₹2.60 Cr – ₹5.20 Cr',
     status: 'Under Construction',
     brochure: '/brochures/ashtech presidential towers brochure.pdf',
-    image: '/placeholder-property.svg',
+    image: '/Properties/Ashtech Presidential Towers/APT 1.jpg',
     gallery: [
-      '/placeholder-property.svg'
+      '/Properties/Ashtech Presidential Towers/APT 1.jpg',
+      '/Properties/Ashtech Presidential Towers/APT 2.jpg',
+      '/Properties/Ashtech Presidential Towers/APT 3.jpeg',
+      '/Properties/Ashtech Presidential Towers/APT 4.jpeg',
+      '/Properties/Ashtech Presidential Towers/APT 5.webp',
+      '/Properties/Ashtech Presidential Towers/APT 6.webp'
     ],
     desc: 'High-end presidential residences offering ultra-spacious layouts, sky lounge, panoramic city views, and curated luxury lifestyle amenities.',
     beds: '3 & 4 BHK',
@@ -319,9 +331,16 @@ const ALL_PROPERTIES = [
     price: '₹3.10 Cr – ₹5.80 Cr',
     status: 'Under Construction',
     brochure: '/brochures/experion saatori brochure.pdf',
-    image: '/placeholder-property.svg',
+    image: '/Properties/Experion Saatori/ES 1.avif',
     gallery: [
-      '/placeholder-property.svg'
+      '/Properties/Experion Saatori/ES 1.avif',
+      '/Properties/Experion Saatori/ES 2.avif',
+      '/Properties/Experion Saatori/ES 3.avif',
+      '/Properties/Experion Saatori/ES 4.avif',
+      '/Properties/Experion Saatori/ES 5.avif',
+      '/Properties/Experion Saatori/ES 6.avif',
+      '/Properties/Experion Saatori/ES 7.avif',
+      '/Properties/Experion Saatori/ES 8.avif'
     ],
     desc: 'Curated Japanese-inspired biophilic residences offering serene zen landscapes, bespoke concierge, and low-density luxury living.',
     beds: '3 & 4 BHK',
@@ -353,9 +372,12 @@ const ALL_PROPERTIES = [
     price: '₹32 Lac – ₹1.80 Cr',
     status: 'Under Construction',
     brochure: '/brochures/kb westwalk brochure.pdf',
-    image: '/placeholder-property.svg',
+    image: '/Properties/KB Westwalk/KBW 1.jpg',
     gallery: [
-      '/placeholder-property.svg'
+      '/Properties/KB Westwalk/KBW 1.jpg',
+      '/Properties/KB Westwalk/KBW 2.jpg',
+      '/Properties/KB Westwalk/KBW 3.jpg',
+      '/Properties/KB Westwalk/KBW 4.jpg'
     ],
     desc: 'Premier high-street retail and entertainment destination with open walkways, bustling dining avenues, and modern studio spaces.',
     beds: 'Retail, Food Court & Studios',
@@ -370,9 +392,13 @@ const ALL_PROPERTIES = [
     price: '₹8.50 Cr – ₹16.50 Cr',
     status: 'Under Construction',
     brochure: '/brochures/max estate 105 brochure.pdf',
-    image: '/placeholder-property.svg',
+    image: '/Properties/Max Estate 105/ME105 1.webp',
     gallery: [
-      '/placeholder-property.svg'
+      '/Properties/Max Estate 105/ME105 1.webp',
+      '/Properties/Max Estate 105/ME105 2.webp',
+      '/Properties/Max Estate 105/ME105 3.webp',
+      '/Properties/Max Estate 105/ME105 4.webp',
+      '/Properties/Max Estate 105/ME105 6.webp'
     ],
     desc: 'Exclusive ultra-luxury wellness residences designed by world-renowned architects, featuring forest landscapes and 5-star concierge.',
     beds: '4 & 5 BHK',
@@ -387,9 +413,13 @@ const ALL_PROPERTIES = [
     price: '₹11.00 Cr – ₹28.00 Cr',
     status: 'Under Construction',
     brochure: '/brochures/max estates 128 brochure.pdf',
-    image: '/placeholder-property.svg',
+    image: '/Properties/Max Estates 128/ME128 1.jpg',
     gallery: [
-      '/placeholder-property.svg'
+      '/Properties/Max Estates 128/ME128 1.jpg',
+      '/Properties/Max Estates 128/ME128 2.jpg',
+      '/Properties/Max Estates 128/ME128 3.jpg',
+      '/Properties/Max Estates 128/ME128 4.jpg',
+      '/Properties/Max Estates 128/ME128 5.jpg'
     ],
     desc: 'Ultra-exclusive golf course residences offering private plunge pools, uninterrupted views, grand arrival pavilions, and bespoke living.',
     beds: '4 & 5 BHK',
@@ -404,9 +434,13 @@ const ALL_PROPERTIES = [
     price: '₹35 Lac – ₹1.10 Cr',
     status: 'Under Construction',
     brochure: '/brochures/nirala diadem brochure.pdf',
-    image: '/placeholder-property.svg',
+    image: '/Properties/Nirala Diadem/ND 1.jpg',
     gallery: [
-      '/placeholder-property.svg'
+      '/Properties/Nirala Diadem/ND 1.jpg',
+      '/Properties/Nirala Diadem/ND 2.jpg',
+      '/Properties/Nirala Diadem/ND 3.jpg',
+      '/Properties/Nirala Diadem/ND 4.jpg',
+      '/Properties/Nirala Diadem/ND 5.jpg'
     ],
     desc: 'Modern commercial hub featuring high-visibility retail outlets, multiplex screen zones, and state-of-the-art office spaces.',
     beds: 'Studio & Retail Suites',

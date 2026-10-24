@@ -45,6 +45,14 @@ export default function BrochureModal({ property, isOpen, onClose }) {
       'Max Estates 128': '/brochures/max estates 128 brochure.pdf',
       'Nirala Diadem': '/brochures/nirala diadem brochure.pdf',
       'Nirala Gateway': '/brochures/nirala gateway brochure.pdf',
+      'Elite X': '/brochures/Elite X brochure.pdf',
+      'Godrej Majesty': '/brochures/Godrej Majesty brochure.pdf',
+      'Sublime Spring Elmas': '/brochures/Spring Elmas brochure.pdf',
+      'Ace Hanei': '/brochures/Ace Hanei brochure.pdf',
+      'Arihant Abode': '/brochures/Arihant abode brochure.pdf',
+      'Nirala Estate': '/brochures/Nirala Estate Brochure.pdf',
+      'Shobha Rivana': '/brochures/Sobha Rivana brochure.pdf',
+      'Sobha Rivana': '/brochures/Sobha Rivana brochure.pdf',
     };
 
     const pdfUrl = prop.brochure || brochureMap[prop.name];
