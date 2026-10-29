@@ -14,23 +14,21 @@ export default function Hero() {
 
   return (
     <section id="home" className="hero-section">
-      {/* Background Video Container */}
+      {/* Background Banner Container */}
       <div className="hero-bg-wrapper">
         <div className="hero-bg-overlay"></div>
-        <video 
-          autoPlay 
-          loop 
-          muted 
-          playsInline 
-          className="hero-bg-image hero-bg-video animate-fadeIn"
-        >
-          <source src="/video banner.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
+        <picture className="hero-bg-picture">
+          <source media="(max-width: 768px)" srcSet="/Hero%20Diwali%20Banner%20Phone.png" />
+          <img 
+            src="/Hero%20Diwali%20Banner.png" 
+            alt="Hero Diwali Banner" 
+            className="hero-bg-image animate-fadeIn" 
+          />
+        </picture>
       </div>
 
       <div className="hero-content-container">
-        {/* Categories / Pill Tags */}
+        {/* Categories / Pill Tags (Commented out)
         <div className="hero-category-pills animate-hero-pills">
           {categories.map((category) => (
             <button
@@ -42,8 +40,9 @@ export default function Hero() {
             </button>
           ))}
         </div>
+        */}
 
-        {/* Hero Title & Description Grid */}
+        {/* Hero Title & Description Grid (Commented out)
         <div className="hero-main-grid">
           <div className="hero-left animate-hero-title">
             <h1 className="hero-title">
@@ -57,6 +56,7 @@ export default function Hero() {
             </p>
           </div>
         </div>
+        */}
 
         {/* Overlay Search Bar */}
         <div className="hero-search-wrapper animate-hero-search">

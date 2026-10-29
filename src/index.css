@@ -160,7 +160,7 @@ button {
 }
 
 .navbar-content {
-  max-width: 1400px;
+  max-width: 1540px;
   margin: 0 auto;
   display: flex;
   align-items: center;
@@ -176,6 +176,7 @@ button {
   font-weight: 700;
   font-size: 20px;
   font-family: var(--font-title);
+  margin-left: -36px; /* Shift logo more to the left */
 }
 
 .logo-img {
@@ -195,22 +196,24 @@ button {
   flex-grow: 1;
   display: flex;
   justify-content: center;
+  margin-right: 32px; /* Fine-tuned a very tiny touch to the left */
 }
 
 .nav-capsule {
   display: flex;
   align-items: center;
-  background: var(--glass-bg);
-  border: 1px solid var(--glass-border);
-  backdrop-filter: var(--glass-blur);
-  -webkit-backdrop-filter: var(--glass-blur);
+  background: #FFFFFF !important; /* Solid clean white capsule */
+  border: 1px solid rgba(0, 0, 0, 0.08) !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
   padding: 6px;
   border-radius: var(--radius-full);
   gap: 4px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15) !important;
 }
 
 .nav-link {
-  color: #FFFFFF; /* White text for About Us, Properties, Services on landing page */
+  color: #000000 !important; /* Black text */
   font-size: 13px;
   font-weight: 500;
   padding: 8px 18px;
@@ -219,13 +222,13 @@ button {
 }
 
 .nav-link:hover {
-  color: #FFFFFF;
-  background: rgba(255, 255, 255, 0.15); /* Soft white highlight on hover */
+  color: #000000 !important;
+  background: rgba(0, 0, 0, 0.06) !important;
 }
 
 .nav-link.active {
-  background: #FFFFFF;
-  color: #0F172A;
+  background: #000000 !important;
+  color: #FFFFFF !important;
   font-weight: 600;
   box-shadow: var(--shadow-sm);
 }
@@ -401,7 +404,7 @@ button {
   position: relative;
   width: 100%;
   height: 100vh;
-  min-height: 800px; /* Restored original height */
+  min-height: auto;
   display: flex;
   align-items: center;
   color: var(--text-light);
@@ -417,13 +420,21 @@ button {
   height: 100%;
   z-index: 1;
   overflow: hidden;
+  background-color: #170407;
+}
+
+.hero-bg-picture {
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 
 .hero-bg-image {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 15%; /* Shifts focal point further upwards to reveal more sky/landscape and zoom out the building */
+  object-position: center bottom;
+  transform: none !important;
 }
 
 .hero-bg-overlay {
@@ -434,12 +445,13 @@ button {
   height: 100%;
   background: linear-gradient(
     to bottom,
-    rgba(11, 15, 25, 0.2) 0%,
-    rgba(11, 15, 25, 0.35) 35%,
-    rgba(11, 15, 25, 0.55) 70%,
-    rgba(11, 15, 25, 0.75) 100%
+    rgba(15, 6, 8, 0.2) 0%,
+    transparent 18%,
+    transparent 82%,
+    rgba(15, 6, 8, 0.3) 100%
   );
   z-index: 2;
+  pointer-events: none;
 }
 
 .hero-content-container {
@@ -1596,7 +1608,7 @@ button {
   }
   .hero-section {
     min-height: auto;
-    overflow: hidden;
+    overflow: visible;
     width: 100%;
     max-width: 100%;
   }
@@ -1759,8 +1771,40 @@ button {
 }
 
 @media (max-width: 768px) {
+  .hero-bg-overlay {
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.65) 0%,
+      rgba(0, 0, 0, 0.38) 110px,
+      rgba(0, 0, 0, 0.12) 190px,
+      rgba(0, 0, 0, 0.02) 250px,
+      transparent 280px
+    ) !important;
+  }
   .navbar-container {
-    padding: 16px 20px;
+    padding: 28px 20px 16px; /* Moved lower down from the top */
+  }
+  .navbar-logo {
+    margin-left: -8px;
+  }
+  .logo-img {
+    height: 95px; /* Made EUD logo bigger */
+    margin-top: -6px;
+    margin-bottom: -6px;
+  }
+  .mobile-toggle {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    padding: 4px;
+  }
+  .mobile-toggle svg {
+    width: 32px !important; /* Made hamburger menu icon bigger */
+    height: 32px !important;
+  }
+  .mobile-dropdown-menu {
+    top: calc(100% + 8px);
+    right: 20px;
   }
   .hero-title {
     font-size: 36px;
@@ -1769,11 +1813,6 @@ button {
   }
   .hero-description {
     display: none;
-  }
-  .logo-img {
-    height: 70px;
-    margin-top: -3px;
-    margin-bottom: -3px;
   }
   .hero-section {
     min-height: auto;
@@ -1797,27 +1836,67 @@ button {
   .testimonials-inner {
     padding: 0 20px;
   }
+  /* Mobile Single Stripe Search Bar (No extra selections) */
+  .search-bar-card {
+    padding: 6px 6px 6px 18px !important;
+    border-radius: 9999px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    background: #FFFFFF !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.16) !important;
+  }
   .search-inputs-grid {
-    grid-template-columns: 1fr;
-    gap: 12px;
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    gap: 8px !important;
+    width: 100% !important;
+    margin: 0 !important;
+  }
+  .search-inputs-grid > .search-field-group:first-child {
+    display: none !important; /* Hide extra selections dropdown on mobile */
+  }
+  .search-field-group {
+    margin: 0 !important;
+  }
+  .search-field-group .field-label {
+    display: none !important; /* Hide labels */
+  }
+  .search-inputs-grid > .search-field-group:nth-child(2) {
+    flex: 1 !important;
+    width: 100% !important;
+  }
+  .search-input-text {
+    background: transparent !important;
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+    height: 40px !important;
+    padding: 0 !important;
+    font-size: 14px !important;
+    width: 100% !important;
+    color: #0F172A !important;
   }
   .search-inputs-grid > .search-field-group:last-child {
-    grid-column: span 1;
-  }
-  .search-field-group:last-child label.field-label {
-    display: none;
-  }
-  .search-bar-card {
-    padding: 16px;
-    border-radius: 18px;
-    width: 100%;
-    box-sizing: border-box;
+    flex-shrink: 0 !important;
+    width: auto !important;
+    grid-column: auto !important;
   }
   .btn-search-submit-grid {
-    justify-content: center;
-    width: 100%;
-    margin-top: 4px;
-    height: 42px;
+    height: 40px !important;
+    padding: 0 18px !important;
+    border-radius: 9999px !important;
+    margin: 0 !important;
+    width: auto !important;
+    font-size: 13px !important;
+    font-weight: 600 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 6px !important;
+    background: #000000 !important;
+    color: #FFFFFF !important;
+    white-space: nowrap !important;
   }
   .search-bar-footer {
     flex-direction: column;
@@ -1883,6 +1962,16 @@ button {
     .pricing-card-image-wrapper {
       height: 190px !important;
     }
+    .navbar-container {
+      padding: 24px 16px 14px;
+    }
+    .logo-img {
+      height: 88px;
+    }
+    .mobile-toggle svg {
+      width: 30px !important;
+      height: 30px !important;
+    }
     .hero-title {
       font-size: 28px;
       line-height: 1.22;
@@ -1896,21 +1985,17 @@ button {
       padding-bottom: 40px;
     }
     .search-bar-card {
-      padding: 14px 14px;
-      border-radius: 16px;
+      padding: 5px 5px 5px 14px !important;
+      border-radius: 9999px !important;
     }
-    .category-pill {
-      padding: 6px 14px;
-      font-size: 12px;
-    }
-    .hero-category-pills {
-      gap: 8px;
-      margin-bottom: 18px;
-    }
-    .custom-dropdown-trigger,
     .search-input-text {
-      height: 40px;
-      font-size: 13px;
+      height: 38px !important;
+      font-size: 13.5px !important;
+    }
+    .btn-search-submit-grid {
+      height: 38px !important;
+      padding: 0 14px !important;
+      font-size: 12.5px !important;
     }
   }
 }
@@ -3940,11 +4025,9 @@ button {
 @keyframes heroFadeIn {
   from {
     opacity: 0;
-    transform: scale(1.04);
   }
   to {
     opacity: 1;
-    transform: scale(1);
   }
 }
 
@@ -6403,6 +6486,15 @@ button {
   }
 }
 
+@keyframes navFadeOnly {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 /* Navbar Elements */
 .animate-nav-logo {
   animation: slideDownFade 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards;
@@ -6411,7 +6503,7 @@ button {
 }
 
 .animate-nav-capsule {
-  animation: slideDownFade 0.95s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation: navFadeOnly 0.95s cubic-bezier(0.16, 1, 0.3, 1) forwards;
   animation-delay: 2.5s;
   opacity: 0;
 }

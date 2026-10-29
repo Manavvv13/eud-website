@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
+import { Search } from 'lucide-react';
 
 const PREVIEW_PROPERTIES = [
   { name: 'CRC Joyous', location: 'Techzone 4 Noida Extension', type: 'Apartment' },
@@ -29,7 +30,15 @@ export default function SearchBar({ onSearch }) {
   const [location, setLocation] = useState('');
   const [openDropdown, setOpenDropdown] = useState(null); // 'type' | null
   const [showResultsDropdown, setShowResultsDropdown] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
   const dropdownRef = useRef(null);
+
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth <= 768);
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
 
   // Close dropdowns when clicking outside
   useEffect(() => {
@@ -79,14 +88,15 @@ export default function SearchBar({ onSearch }) {
   const types = ["Apartment", "Commercial"];
 
   // Filter properties based on type and typed search
-  const matchedProperties = PREVIEW_PROPERTIES.filter((p) => {
-    const matchesType = !propertyType || p.type.toLowerCase() === propertyType.toLowerCase();
-    const query = location.trim().toLowerCase();
-    const matchesLoc = p.location.toLowerCase().includes(query) || 
-                       p.name.toLowerCase().includes(query);
-    // Only return matching properties if the user has typed something in the locations input
-    return query !== '' && matchesType && matchesLoc;
-  }).slice(0, 5); // Show top 5 matches
+  const query = location.trim().toLowerCase();
+  const displayedProperties = (query === '')
+    ? (isMobile ? PREVIEW_PROPERTIES.slice(0, 5) : [])
+    : PREVIEW_PROPERTIES.filter((p) => {
+        const matchesType = !propertyType || p.type.toLowerCase() === propertyType.toLowerCase();
+        const matchesLoc = p.location.toLowerCase().includes(query) || 
+                           p.name.toLowerCase().includes(query);
+        return matchesType && matchesLoc;
+      }).slice(0, 5); // Show top 5 matches
 
   return (
     <div className="search-bar-card animate-fadeInUp delay-3" ref={dropdownRef}>
@@ -130,13 +140,14 @@ export default function SearchBar({ onSearch }) {
             <input 
               type="text"
               className="search-input-text"
-              placeholder="Search property or location..."
+              placeholder={isMobile ? "Search property..." : "Search property or location..."}
               value={location}
               onChange={(e) => {
                 setLocation(e.target.value);
                 setShowResultsDropdown(true);
               }}
               onFocus={() => setShowResultsDropdown(true)}
+              onClick={() => setShowResultsDropdown(true)}
             />
           </div>
 
@@ -144,17 +155,20 @@ export default function SearchBar({ onSearch }) {
           <div className="search-field-group">
             <label className="field-label" style={{ opacity: 0 }}>Search</label>
             <button type="submit" className="btn-search-submit-grid">
-              Search Properties
+              <Search size={16} className="btn-search-icon" />
+              <span>{isMobile ? "Search" : "Search Properties"}</span>
             </button>
           </div>
         </div>
       </form>
 
       {/* Live search results dropdown */}
-      {showResultsDropdown && (location || propertyType) && matchedProperties.length > 0 && (
+      {showResultsDropdown && displayedProperties.length > 0 && (
         <div className="search-results-preview-menu">
-          <div className="results-preview-header">Matched Properties</div>
-          {matchedProperties.map((p, idx) => (
+          <div className="results-preview-header">
+            {query === '' ? 'Popular Properties' : 'Matched Properties'}
+          </div>
+          {displayedProperties.map((p, idx) => (
             <div 
               key={idx} 
               className="results-preview-item"
