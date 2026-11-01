@@ -20,7 +20,7 @@ export default function Hero() {
         <picture className="hero-bg-picture">
           <source media="(max-width: 768px)" srcSet="/Hero%20Diwali%20Banner%20Phone.png" />
           <img 
-            src="/Hero%20Diwali%20Banner.png" 
+            src="/Hero%20Diwali%20Banner.jpeg" 
             alt="Hero Diwali Banner" 
             className="hero-bg-image animate-fadeIn" 
           />
