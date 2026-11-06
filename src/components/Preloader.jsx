@@ -11,7 +11,7 @@ export default function Preloader({ onComplete }) {
     document.body.style.overflow = 'hidden';
 
     const startTime = Date.now();
-    const duration = 10000; // 0 to 100 in 10s
+    const duration = 25000; // 0 to 100 in 25s
 
     const interval = setInterval(() => {
       const elapsed = Date.now() - startTime;
