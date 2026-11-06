@@ -1,10 +1,19 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import SearchBar from './SearchBar';
 
 export default function Hero() {
   const [activeCategory, setActiveCategory] = useState('House');
+  const [heroVisible, setHeroVisible] = useState(false);
   const navigate = useNavigate();
+
+  useEffect(() => {
+    // Delay hero section entrance by 4s after preloader finishes
+    const timer = setTimeout(() => {
+      setHeroVisible(true);
+    }, 4000);
+    return () => clearTimeout(timer);
+  }, []);
 
   const categories = ['House', 'Apartment', 'Residential'];
 
@@ -13,7 +22,7 @@ export default function Hero() {
   };
 
   return (
-    <section id="home" className="hero-section">
+    <section id="home" className={`hero-section ${heroVisible ? 'hero-revealed' : 'hero-delayed'}`}>
       {/* Background Banner Container */}
       <div className="hero-bg-wrapper">
         <div className="hero-bg-overlay"></div>
